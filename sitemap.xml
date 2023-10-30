@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xxsy613.github.io/2022/11/02/%E5%80%BC%E5%BE%97%E7%BA%AA%E5%BF%B5%E7%9A%84%E4%B8%80%E5%A4%A9/</loc>
+    
+    <lastmod>2023-10-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://xxsy613.github.io/2023/10/30/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
     
     <lastmod>2023-10-30</lastmod>
@@ -77,15 +86,6 @@
     <loc>http://xxsy613.github.io/2023/10/30/408%E7%9C%9F%E9%A2%98%E5%8D%B7%E5%BD%92%E6%A1%A3/</loc>
     
     <lastmod>2023-10-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://xxsy613.github.io/2022/11/02/%E5%80%BC%E5%BE%97%E7%BA%AA%E5%BF%B5%E7%9A%84%E4%B8%80%E5%A4%A9/</loc>
-    
-    <lastmod>2022-11-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
