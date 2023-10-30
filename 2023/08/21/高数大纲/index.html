@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="整理自武忠祥强化课内容 第一章 函数，极限，连续1 函数1.1 函数概念与表示法1.2 复合函数1.3 分段函数需要分段的函数：  含有绝对值的函数  含有最大值最小值的函数  $$含有x→∞，对于e^x和x^a在不同极限得出的值不同$$   1.4 初等函数性质1.4.1 奇函数 偶函数 周期函数偶函数：奇函数的导数 奇函数的不定积分 偶函数符合奇偶函数 奇函数×奇函数 偶函数×偶函数 奇函数：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="水云的博客">
+<meta property="og:url" content="http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/index.html">
+<meta property="og:site_name" content="水云的博客">
+<meta property="og:description" content="整理自武忠祥强化课内容 第一章 函数，极限，连续1 函数1.1 函数概念与表示法1.2 复合函数1.3 分段函数需要分段的函数：  含有绝对值的函数  含有最大值最小值的函数  $$含有x→∞，对于e^x和x^a在不同极限得出的值不同$$   1.4 初等函数性质1.4.1 奇函数 偶函数 周期函数偶函数：奇函数的导数 奇函数的不定积分 偶函数符合奇偶函数 奇函数×奇函数 偶函数×偶函数 奇函数：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://xxsy613.github.io/Users/moon/Downloads/v2-2d7645a8c95f9e4960c8697be4521cb5_1440w.png">
+<meta property="og:image" content="http://staff.ustc.edu.cn/~rui/ppt/function-pictures/c-surface/tuoyuan-paowu.gif">
+<meta property="og:image" content="http://staff.ustc.edu.cn/~rui/ppt/function-pictures/c-surface/tuo-qiu.gif">
+<meta property="og:image" content="http://staff.ustc.edu.cn/~rui/ppt/function-pictures/c-surface/zuimian.gif">
+<meta property="article:published_time" content="2023-08-21T08:11:19.905Z">
+<meta property="article:modified_time" content="2023-10-30T07:50:07.791Z">
+<meta property="article:author" content="潇湘水云">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xxsy613.github.io/Users/moon/Downloads/v2-2d7645a8c95f9e4960c8697be4521cb5_1440w.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>水云的博客</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/%5Bobject%20Object%5D" title="水云的博客" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2023/09/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2022/11/02/%E5%80%BC%E5%BE%97%E7%BA%AA%E5%BF%B5%E7%9A%84%E4%B8%80%E5%A4%A9/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&text="><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&is_video=false&description="><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&name=&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&t="><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%87%BD%E6%95%B0%EF%BC%8C%E6%9E%81%E9%99%90%EF%BC%8C%E8%BF%9E%E7%BB%AD"><span class="toc-number">1.</span> <span class="toc-text">第一章 函数，极限，连续</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%87%BD%E6%95%B0%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 函数概念与表示法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 复合函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%88%86%E6%AE%B5%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 分段函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0%E6%80%A7%E8%B4%A8"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4 初等函数性质</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-1-%E5%A5%87%E5%87%BD%E6%95%B0-%E5%81%B6%E5%87%BD%E6%95%B0-%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">1.4.1 奇函数 偶函数 周期函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-%E5%87%BD%E6%95%B0%E7%9A%84%E6%9C%89%E7%95%8C%E6%80%A7"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.4.2 函数的有界性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-2-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0%E5%9B%BE%E5%BD%A2"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">1.4.2 初等函数图形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">1.5 参数方程表示的函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9E%81%E9%99%90"><span class="toc-number">1.2.</span> <span class="toc-text">2 极限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%9E%81%E9%99%90%EF%BC%8C%E5%B7%A6%E5%8F%B3%E6%9E%81%E9%99%90%EF%BC%8C%E5%AD%98%E5%9C%A8%E6%80%A7"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 极限，左右极限，存在性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9E%81%E9%99%90%E6%80%A7%E8%B4%A8%E4%B8%8E%E8%BF%90%E7%AE%97%E6%B3%95%E5%88%99"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 极限性质与运算法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%9E%81%E9%99%90%E5%AD%98%E5%9C%A8%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%87%86%E5%88%99"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 极限存在的两个准则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%95%B0%E5%88%97%E6%94%B6%E6%95%9B%E4%B8%8E%E6%B1%82%E6%95%B0%E5%88%97%E7%9A%84%E6%9E%81%E9%99%90"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 数列收敛与求数列的极限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.5 两个重要极限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-%E6%97%A0%E7%A9%B7%E5%B0%8F"><span class="toc-number">1.2.6.</span> <span class="toc-text">2.6 无穷小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-%E6%97%A0%E7%A9%B7%E5%B0%8F%E6%AF%94%E9%98%B6"><span class="toc-number">1.2.7.</span> <span class="toc-text">2.7 无穷小比阶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-%E6%B1%82%E6%9E%81%E9%99%90%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.8.</span> <span class="toc-text">2.8 求极限常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-9-%E6%B1%82%E6%9E%81%E9%99%90%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B"><span class="toc-number">1.2.9.</span> <span class="toc-text">2.9 求极限常见题型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BF%9E%E7%BB%AD"><span class="toc-number">1.3.</span> <span class="toc-text">3 连续</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E4%B8%8E%E5%B7%A6%E5%8F%B3%E8%BF%9E%E7%BB%AD"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 函数的连续与左右连续</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%97%AD%E5%8C%BA%E9%97%B4%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0%E6%80%A7%E8%B4%A8"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 闭区间连续函数性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E9%97%B4%E6%96%AD%E7%82%B9"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 间断点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6"><span class="toc-number">2.</span> <span class="toc-text">第二章 一元函数微分学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AF%BC%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">1 导数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.1 导数与微分的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%8F%AF%E5%AF%BC%EF%BC%8C%E5%8F%AF%E5%BE%AE%EF%BC%8C%E8%BF%9E%E7%BB%AD%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">2.1.2.</span> <span class="toc-text">1.2 可导，可微，连续的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%9E%81%E5%80%BC%E7%82%B9%EF%BC%8C%E9%A9%BB%E7%82%B9%EF%BC%8C%E6%8B%90%E7%82%B9"><span class="toc-number">2.1.3.</span> <span class="toc-text">1.3 极值点，驻点，拐点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%AF%BC%E6%95%B0%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%E4%B8%8E%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0%E6%B1%82%E5%AF%BC"><span class="toc-number">2.1.4.</span> <span class="toc-text">1.4 导数四则运算与复合函数求导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E5%87%BD%E6%95%B0%E7%9A%84%E6%B8%90%E8%BF%91%E7%BA%BF%E6%B1%82%E6%B3%95"><span class="toc-number">2.1.5.</span> <span class="toc-text">1.5 函数的渐近线求法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0%E5%AF%BC%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="toc-number">2.1.6.</span> <span class="toc-text">1.6 初等函数导数公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-%E6%B1%82%E5%AF%BC%E6%B3%95%E5%8F%8A%E9%A2%98%E5%9E%8B"><span class="toc-number">2.1.7.</span> <span class="toc-text">1.7 求导法及题型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AF%BC%E6%95%B0%E5%BA%94%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text">2 导数应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%BD%97%E5%B0%94%E5%AE%9A%E7%90%86"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1 罗尔定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2 拉格朗日中值定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.3 泰勒展开</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E4%B8%AD%E6%9E%84%E9%80%A0%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">3 微分中值定理中构造辅助函数的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E5%AD%A6"><span class="toc-number">3.</span> <span class="toc-text">第三章 一元函数积分学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.</span> <span class="toc-text">1 不定积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E5%8E%9F%E5%87%BD%E6%95%B0%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.1.</span> <span class="toc-text">1.1原函数概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1-%E5%8E%9F%E5%87%BD%E6%95%B0%E4%B8%8E%E5%AE%9A%E7%A7%AF%E5%88%86%E5%AD%98%E5%9C%A8%E5%AE%9A%E7%90%86%E7%9A%84%E8%BE%A8%E6%9E%90"><span class="toc-number">3.1.1.1.</span> <span class="toc-text">1.1.1 原函数与定积分存在定理的辨析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%92%8C%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.2.</span> <span class="toc-text">1.2 不定积分和定积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%9F%BA%E6%9C%AC%E5%85%AC%E5%BC%8F"><span class="toc-number">3.1.3.</span> <span class="toc-text">1.3 不定积分基本公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">3.1.4.</span> <span class="toc-text">1.4 不定积分的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E5%AE%9A%E7%A7%AF%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86"><span class="toc-number">3.1.5.</span> <span class="toc-text">1.5 定积分中值定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-1-%E5%87%91%E5%BE%AE%E5%88%86%E6%B3%95"><span class="toc-number">3.1.6.</span> <span class="toc-text">1.6.1 凑微分法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-2-%E6%8D%A2%E5%85%83%E7%A7%AF%E5%88%86%E6%B3%95"><span class="toc-number">3.1.7.</span> <span class="toc-text">1.6.2 换元积分法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.8.</span> <span class="toc-text">1.7 分部积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="toc-number">3.1.9.</span> <span class="toc-text">1.8 不定积分解题方法论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8-1-%E6%9C%89%E7%90%86%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.9.1.</span> <span class="toc-text">1.8.1 有理函数积分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8-2-%E4%B8%89%E8%A7%92%E6%9C%89%E7%90%86%E5%BC%8F%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.9.2.</span> <span class="toc-text">1.8.2 三角有理式积分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8-3-%E7%AE%80%E5%8D%95%E6%97%A0%E7%90%86%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.9.3.</span> <span class="toc-text">1.8.3 简单无理函数积分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">3.2.</span> <span class="toc-text">2 定积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8"><span class="toc-number">3.2.1.</span> <span class="toc-text">2.1 定积分的几何应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E7%89%A9%E7%90%86%E5%BA%94%E7%94%A8"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.2 定积分的物理应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="toc-number">3.2.3.</span> <span class="toc-text">2.3 定积分的解题方法论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-%E5%88%A9%E7%94%A8%E5%85%AC%E5%BC%8F"><span class="toc-number">3.2.3.1.</span> <span class="toc-text">2.3.1 利用公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-%E6%8D%A2%E5%85%83%E6%B3%95"><span class="toc-number">3.2.3.2.</span> <span class="toc-text">2.3.2 换元法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%A7%AF%E5%88%86%E8%BF%9B%E9%98%B6"><span class="toc-number">3.3.</span> <span class="toc-text">3 积分进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%8F%98%E9%99%90%E5%87%BD%E6%95%B0%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%B1%82%E5%AF%BC"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.1 变限函数概念与求导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%8F%98%E4%B8%8A%E9%99%90%E7%A7%AF%E5%88%86%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7%E4%B8%8E%E5%8F%AF%E5%AF%BC%E6%80%A7%E5%88%A4%E6%96%AD"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.2 变上限积分的连续性与可导性判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E7%A7%AF%E5%88%86%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3 积分不等式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.4 反常积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E6%B1%82%E7%A7%AF%E5%88%86%E5%87%BD%E6%95%B0"><span class="toc-number">3.3.5.</span> <span class="toc-text">3.5 求积分函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">第四章 常微分方程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%80%E9%98%B6%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.1.</span> <span class="toc-text">1 一阶微分方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8F%AF%E9%99%8D%E4%BB%B7%E7%9A%84%E9%AB%98%E9%98%B6%E6%96%B9%E7%A8%8B"><span class="toc-number">4.2.</span> <span class="toc-text">2 可降价的高阶方程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8F%AF%E9%99%8D%E9%98%B6%E7%9A%84%E9%AB%98%E9%98%B6%E6%96%B9%E7%A8%8B"><span class="toc-number">4.2.1.</span> <span class="toc-text">2.1 可降阶的高阶方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%A7%A3%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">4.2.2.</span> <span class="toc-text">2.2 解的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%80%E8%88%AC%E5%BD%A2%E5%BC%8F"><span class="toc-number">4.2.3.</span> <span class="toc-text">2.3 微分方程的一般形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="toc-number">4.2.4.</span> <span class="toc-text">2.4 解题方法论</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%A9%BA%E9%97%B4%E5%87%A0%E4%BD%95"><span class="toc-number">5.</span> <span class="toc-text">第五章 空间几何</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%A9%BA%E9%97%B4%E5%90%91%E9%87%8F"><span class="toc-number">5.1.</span> <span class="toc-text">1 空间向量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%A9%BA%E9%97%B4%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87"><span class="toc-number">5.1.1.</span> <span class="toc-text">1.1 空间直角坐标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%90%91%E9%87%8F%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97"><span class="toc-number">5.1.2.</span> <span class="toc-text">1.2 向量表示与运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%90%91%E9%87%8F%E7%9A%84%E6%95%B0%E9%87%8F%E7%A7%AF%E4%B8%8E%E5%90%91%E9%87%8F%E7%A7%AF"><span class="toc-number">5.1.3.</span> <span class="toc-text">1.3 向量的数量积与向量积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E6%B7%B7%E5%90%88%E7%A7%AF"><span class="toc-number">5.1.4.</span> <span class="toc-text">1.4 混合积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6"><span class="toc-number">5.1.5.</span> <span class="toc-text">1.5 方向余弦</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%A9%BA%E9%97%B4%E5%87%A0%E4%BD%95"><span class="toc-number">5.2.</span> <span class="toc-text">2 空间几何</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%B9%B3%E9%9D%A2%E4%B8%8E%E7%A9%BA%E9%97%B4%E7%9B%B4%E7%BA%BF"><span class="toc-number">5.2.1.</span> <span class="toc-text">2.1 平面与空间直线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9B%B2%E9%9D%A2%E4%B8%8E%E7%A9%BA%E9%97%B4%E6%9B%B2%E7%BA%BF"><span class="toc-number">5.2.2.</span> <span class="toc-text">2.2 曲面与空间曲线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%9B%B2%E9%9D%A2%E4%B8%8E%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%88%87%E7%BA%BF%E4%B8%8E%E6%B3%95%E7%BA%BF"><span class="toc-number">5.2.3.</span> <span class="toc-text">2.3 曲面与曲线的切线与法线</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6"><span class="toc-number">6.</span> <span class="toc-text">第五章 多元函数微分学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%87%8D%E6%9E%81%E9%99%90%E3%80%81%E8%BF%9E%E7%BB%AD%E3%80%81%E5%81%8F%E5%AF%BC%E6%95%B0%E3%80%81%E5%85%A8%E5%BE%AE%E5%88%86"><span class="toc-number">6.1.</span> <span class="toc-text">1 重极限、连续、偏导数、全微分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%87%8D%E6%9E%81%E9%99%90"><span class="toc-number">6.1.1.</span> <span class="toc-text">1.1 重极限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%81%8F%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%85%A8%E5%BE%AE%E5%88%86%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">6.2.</span> <span class="toc-text">2 偏导数与全微分的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%B1%82%E5%85%B7%E4%BD%93%E7%82%B9%E7%9A%84%E5%81%8F%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%A8%E5%BE%AE%E5%88%86"><span class="toc-number">6.2.1.</span> <span class="toc-text">2.1 求具体点的偏导数及全微分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%B1%82%E5%85%B7%E4%BD%93%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%81%8F%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%A8%E5%BE%AE%E5%88%86"><span class="toc-number">6.2.2.</span> <span class="toc-text">2.2 求具体表达式的偏导数及全微分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%B1%82%E6%8A%BD%E8%B1%A1%E5%87%BD%E6%95%B0%E7%9A%84%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0%E7%9A%84%E5%81%8F%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%A8%E5%BE%AE%E5%88%86"><span class="toc-number">6.2.3.</span> <span class="toc-text">2.3 求抽象函数的复合函数的偏导数及全微分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E9%9A%90%E5%87%BD%E6%95%B0%E6%B1%82%E5%AF%BC%E6%B3%95"><span class="toc-number">6.2.4.</span> <span class="toc-text">2.4 隐函数求导法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9E%81%E5%80%BC%E4%B8%8E%E6%9C%80%E5%80%BC"><span class="toc-number">6.3.</span> <span class="toc-text">3 极值与最值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%97%A0%E6%9D%A1%E4%BB%B6%E6%9E%81%E5%80%BC"><span class="toc-number">6.3.1.</span> <span class="toc-text">3.1 无条件极值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%9D%A1%E4%BB%B6%E6%9E%81%E5%80%BC%E5%8F%8A%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E6%95%B0%E6%B3%95"><span class="toc-number">6.3.2.</span> <span class="toc-text">3.2 条件极值及拉格朗日乘数法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%80%BC"><span class="toc-number">6.3.3.</span> <span class="toc-text">3.3 最大最小值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%96%B9%E5%90%91%E5%AF%BC%E6%95%B0"><span class="toc-number">6.4.</span> <span class="toc-text">4 方向导数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E5%90%91%E5%AF%BC%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E8%AE%A1%E7%AE%97"><span class="toc-number">6.4.1.</span> <span class="toc-text">4.1 方向导数的概念及计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%A2%AF%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97"><span class="toc-number">6.4.2.</span> <span class="toc-text">4.2 梯度的概念与计算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E5%AD%A6"><span class="toc-number">7.</span> <span class="toc-text">第六章 多元函数积分学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-number">7.1.</span> <span class="toc-text">1 二重积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">7.1.1.</span> <span class="toc-text">1.1 二重积分的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95"><span class="toc-number">7.1.2.</span> <span class="toc-text">1.2 二重积分解题方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-number">7.2.</span> <span class="toc-text">2 三重积分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86"><span class="toc-number">7.3.</span> <span class="toc-text">3 曲线积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BA%8C%E7%B1%BB%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86%E8%BF%90%E7%AE%97"><span class="toc-number">7.3.1.</span> <span class="toc-text">3.1 二类曲线积分运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%A0%BC%E6%9E%97%E5%85%AC%E5%BC%8F-%E8%B7%AF%E5%BE%84%E6%97%A0%E5%85%B3"><span class="toc-number">7.3.2.</span> <span class="toc-text">3.2 格林公式+路径无关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-number">7.4.</span> <span class="toc-text">4 曲面积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E4%B8%A4%E7%B1%BB%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">7.4.1.</span> <span class="toc-text">4.1 两类曲面积分的运算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0"><span class="toc-number">8.</span> <span class="toc-text">第七章 无穷级数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B8%B8%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0"><span class="toc-number">8.1.</span> <span class="toc-text">1 常数项级数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%BA%A7%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="toc-number">8.1.1.</span> <span class="toc-text">1.1 级数基本性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%88%A4%E6%96%AD%E6%AD%A3%E9%A1%B9%E7%BA%A7%E6%95%B0%E6%95%9B%E6%95%A3%E6%80%A7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">8.1.2.</span> <span class="toc-text">1.2 判断正项级数敛散性的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%BA%A4%E9%94%99%E7%BA%A7%E6%95%B0"><span class="toc-number">8.1.3.</span> <span class="toc-text">1.3 交错级数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E4%BB%BB%E6%84%8F%E6%80%A7%E7%BA%A7%E6%95%B0"><span class="toc-number">8.1.4.</span> <span class="toc-text">1.4 任意性级数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E5%B8%B8%E7%94%A8%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="toc-number">8.1.5.</span> <span class="toc-text">1.5 常用解题方法论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%B9%82%E7%BA%A7%E6%95%B0"><span class="toc-number">8.2.</span> <span class="toc-text">2 幂级数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%94%B6%E6%95%9B%E5%8D%8A%E5%BE%84%EF%BC%8C%E6%94%B6%E6%95%9B%E5%8C%BA%E9%97%B4%EF%BC%8C%E6%94%B6%E6%95%9B%E5%9F%9F"><span class="toc-number">8.2.1.</span> <span class="toc-text">2.1 收敛半径，收敛区间，收敛域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%B9%82%E7%BA%A7%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">8.2.2.</span> <span class="toc-text">2.2 幂级数的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80"><span class="toc-number">8.2.3.</span> <span class="toc-text">2.3 函数的幂级数展开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BA%A7%E6%95%B0%E6%B1%82%E5%92%8C%EF%BC%88%E9%87%8D%E9%9A%BE%E7%82%B9%EF%BC%89"><span class="toc-number">8.2.4.</span> <span class="toc-text">2.4 级数求和（重难点）</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">潇湘水云</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-08-21T08:11:19.905Z" itemprop="datePublished">2023-08-21</time>
+        
+        (Updated: <time datetime="2023-10-30T07:50:07.791Z" itemprop="dateModified">2023-10-30</time>)
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><u>整理自武忠祥强化课内容</u></p>
+<h1 id="第一章-函数，极限，连续"><a href="#第一章-函数，极限，连续" class="headerlink" title="第一章 函数，极限，连续"></a>第一章 函数，极限，连续</h1><h2 id="1-函数"><a href="#1-函数" class="headerlink" title="1 函数"></a>1 函数</h2><h3 id="1-1-函数概念与表示法"><a href="#1-1-函数概念与表示法" class="headerlink" title="1.1 函数概念与表示法"></a>1.1 函数概念与表示法</h3><h3 id="1-2-复合函数"><a href="#1-2-复合函数" class="headerlink" title="1.2 复合函数"></a>1.2 复合函数</h3><h3 id="1-3-分段函数"><a href="#1-3-分段函数" class="headerlink" title="1.3 分段函数"></a>1.3 分段函数</h3><p>需要分段的函数：</p>
+<ul>
+<li><p>含有绝对值的函数</p>
+</li>
+<li><p>含有最大值最小值的函数</p>
+</li>
+<li><p>$$<br>含有x→∞，对于e^x和x^a在不同极限得出的值不同<br>$$</p>
+</li>
+</ul>
+<h3 id="1-4-初等函数性质"><a href="#1-4-初等函数性质" class="headerlink" title="1.4 初等函数性质"></a>1.4 初等函数性质</h3><h4 id="1-4-1-奇函数-偶函数-周期函数"><a href="#1-4-1-奇函数-偶函数-周期函数" class="headerlink" title="1.4.1 奇函数 偶函数 周期函数"></a>1.4.1 奇函数 偶函数 周期函数</h4><p>偶函数：奇函数的导数 奇函数的不定积分 偶函数符合奇偶函数 奇函数×奇函数 偶函数×偶函数</p>
+<p>奇函数：偶函数的导数 过原点的偶函数的不定积分 偶函数的导数 奇函数×偶函数 奇函数符合奇函数</p>
+<h3 id="1-4-2-函数的有界性"><a href="#1-4-2-函数的有界性" class="headerlink" title="1.4.2 函数的有界性"></a>1.4.2 函数的有界性</h3><p>有界的证明方法：</p>
+<ul>
+<li>f(x)在[a,b]上连续，则有界</li>
+<li>f(x)在(a,b)上连续，且f(a+)，f(b-)存在，则有界</li>
+<li>f(x)的导数在有限区间I上有界，则有界</li>
+</ul>
+<p>无界函数×有界函数&#x3D;无界函数</p>
+<h4 id="1-4-2-初等函数图形"><a href="#1-4-2-初等函数图形" class="headerlink" title="1.4.2 初等函数图形"></a>1.4.2 初等函数图形</h4><p>需要记忆：arcsinx arccosx arctanx arccotx</p>
+<h4 id="1-5-参数方程表示的函数"><a href="#1-5-参数方程表示的函数" class="headerlink" title="1.5 参数方程表示的函数"></a>1.5 参数方程表示的函数</h4><p>$$<br>双纽线：(x^2+y^2)^2&#x3D;2a^2(x^2-y^2)<br>$$</p>
+<p>$$<br>笛卡尔叶形： x^3+y^3-3axy&#x3D;0(a&gt;0)<br>$$</p>
+<p>曲线关于x对称<br>曲线有渐近线x+y+a&#x3D;0<br>$$<br>心形线：r&#x3D;a（1+cosθ)<br>$$</p>
+<h2 id="2-极限"><a href="#2-极限" class="headerlink" title="2 极限"></a>2 极限</h2><h3 id="2-1-极限，左右极限，存在性"><a href="#2-1-极限，左右极限，存在性" class="headerlink" title="2.1 极限，左右极限，存在性"></a>2.1 极限，左右极限，存在性</h3><p>左右极限存在且相等证明<strong>极限存在</strong></p>
+<h3 id="2-2-极限性质与运算法则"><a href="#2-2-极限性质与运算法则" class="headerlink" title="2.2 极限性质与运算法则"></a>2.2 极限性质与运算法则</h3><ul>
+<li>局部有界限：极限存在可推局部有界，局部无界可推<strong>极限不存在</strong></li>
+<li>局部保号性：极限存在可推保号性</li>
+</ul>
+<h3 id="2-3-极限存在的两个准则"><a href="#2-3-极限存在的两个准则" class="headerlink" title="2.3 极限存在的两个准则"></a>2.3 极限存在的两个准则</h3><ul>
+<li>夹逼定理</li>
+<li>单调有界准则</li>
+</ul>
+<p>用于求解数列、函数极限存在和极限值为多少的问题</p>
+<p>若能判断出数列函数为单调或者有界，则考虑采用单调有界方法做，若无法按单调有界或常规做法来做，用夹逼求极限</p>
+<h3 id="2-4-数列收敛与求数列的极限"><a href="#2-4-数列收敛与求数列的极限" class="headerlink" title="2.4 数列收敛与求数列的极限"></a>2.4 数列收敛与求数列的极限</h3><ul>
+<li><p>a_n &#x3D; f(n)型【f(n)项数固定】</p>
+<p>只需求lim n-&gt;∞ f(n)，若其存在，则{xn}收敛，且其极限值为数列极限</p>
+<p>方法a：可以令n&#x3D;x或n&#x3D;1&#x2F;x，转化为函数极限</p>
+<p>方法b：直接利用极限知识求解</p>
+</li>
+<li><p>a_n&#x3D;f(n)【f(n)项数不固定】</p>
+<p>方法a：夹逼定理</p>
+<p>技巧：看见lim n-&gt;∞ 分母最大&#x2F;分母最小 &#x3D; 1 想到放缩每项分母为最大和最小</p>
+<p>方法b：定积分定义，利用<br>$$<br>\lim_{x\rightarrow+\infty}\frac{1}{n}\sum_{i&#x3D;1}^{n}{f(\frac{1}{n})}&#x3D;\int_{0}^{1}f(x)dx<br>$$</p>
+</li>
+<li><p>有递推式 a_n &#x3D; f(a_n-1)</p>
+<p>此时y &#x3D; a_n ，x&#x3D;a_n-1，构成函数</p>
+<p>方法a：当y&#x3D;f(x)单调递增时，采用单调有界</p>
+<p>方法b：当y&#x3D;f(x)单调递减时，采用<strong>压缩映射</strong> </p>
+<p>思路：<br>$$<br>\lim_{n\rightarrow∞}x_n &#x3D; A<br>$$</p>
+<p>$$<br>|x_{n+1}-A|&lt;|f(x_n)-A|<br>&lt;B|Xn-A|&lt;B^n|X_1-A|\<br>其中 0&lt;&#x3D;B&lt;1<br>$$</p>
+<p>$$<br>|x_{n+1} -A|&lt;B^n|x_1-A| 所以 n\rightarrow∞,|x_{n+1}-A|\rightarrow0\<br>\lim_{n\rightarrow}x_n &#x3D; A\<br>简述：由x_{n+1}-A变为x_n-A，找到一个在0和1之中的一个B，然后用夹逼定理即可证明<br>$$</p>
+</li>
+</ul>
+<h3 id="2-5-两个重要极限"><a href="#2-5-两个重要极限" class="headerlink" title="2.5 两个重要极限"></a>2.5 两个重要极限</h3><p>$$<br>\lim_{x\rightarrow0}\frac{sinx}{x}&#x3D;1<br>$$</p>
+<p>$$<br>\lim_{x\rightarrow∞}(1+\frac{n}{x})^x&#x3D;e^n\<br>\lim_{x\to0}x^x&#x3D;1<br>$$</p>
+<h3 id="2-6-无穷小"><a href="#2-6-无穷小" class="headerlink" title="2.6 无穷小"></a>2.6 无穷小</h3><ol>
+<li>无穷大的倒数是无穷小，但无穷小的倒数不一定是无穷大</li>
+<li>无界变量不一定是无穷大</li>
+<li>0也是x-&gt;x0时的无穷小</li>
+</ol>
+<h3 id="2-7-无穷小比阶"><a href="#2-7-无穷小比阶" class="headerlink" title="2.7 无穷小比阶"></a>2.7 无穷小比阶</h3><p>技巧总结</p>
+<ol>
+<li><p>等价无穷小<br>$$<br>冷门等价无穷小公式\<br>ln(x+\sqrt{1+x^2})—x\<br>(1+x)^n-1—nx<br>$$</p>
+</li>
+<li><p>拉格朗日中值法 适用于复杂的函数情况</p>
+</li>
+<li><p>求导法（洛必达法），适用于原式复杂，但求导后式子简单的情况</p>
+</li>
+<li><p>多种方法复合法<br>情况一：在对β合α比阶时，上下式分别用等价无穷小和拉格朗日中值定理处理，此为简单复合</p>
+<p>情况二：β和α比阶时，出现变上限积分的被积函数为复合函数则要用变量代换将复合函数化为简单函数，再求导</p>
+</li>
+</ol>
+<p>易错点</p>
+<ol>
+<li><strong>轻信等价无穷小，忽视了泰勒展开精度，如遇此类大题，着重注意泰勒精度</strong>，如嫌泰勒麻烦，恰好可用拉格朗日中值，则优先此</li>
+<li>在非比阶式下，直接使用等价无穷小，结果未加1，求导后要加上因求导而下降的阶数</li>
+</ol>
+<h3 id="2-8-求极限常用方法"><a href="#2-8-求极限常用方法" class="headerlink" title="2.8 求极限常用方法"></a>2.8 求极限常用方法</h3><ol>
+<li><p>利用有理运算法则求极限</p>
+<p>拆分函数，极限非零的因子可先求出来</p>
+</li>
+<li><p>利用基本极限求极限</p>
+</li>
+<li><p>利用等价无穷小求极限<br>注意可以用等价无穷小的原则</p>
+<p>乘除可以换，加减需要满足加数和被加数，减数和被减数之间，求分数极限不等于1</p>
+<p>比如tanx-sinx因为lim tanx&#x2F;sinx等于1，所以不能应用等价无穷小</p>
+</li>
+<li><p>利用洛必达法则求极限</p>
+</li>
+<li><p><strong>利用泰勒公式求极限</strong></p>
+<p>泰勒公式展开时如果出现比目标次幂高阶的情况，可以省略掉高阶项，低阶吸高阶</p>
+</li>
+<li><p><strong>利用夹逼准则求极限</strong></p>
+<p>夹逼准则使用时的常见不等式积累：<br>$$<br>\sin x&lt;x&lt;\tan x\<br>\arctan x&lt;x&lt;\arcsin x\<br>e^x &gt;x+1\<br>\ln x &lt;x-1\<br>\frac{x}{1+x}&lt;\ln (1+x)&lt;x\<br>\sqrt{xy}&lt;\frac{x+y}{2}&lt;\sqrt\frac{x^2+y^2}{2}<br>$$</p>
+</li>
+<li><p>利用定积分定义求极限</p>
+<p>时机如上</p>
+</li>
+<li><p>利用单调有界准则求极限</p>
+</li>
+</ol>
+<h3 id="2-9-求极限常见题型"><a href="#2-9-求极限常见题型" class="headerlink" title="2.9 求极限常见题型"></a>2.9 求极限常见题型</h3><ul>
+<li><p>0&#x2F;0</p>
+<p>洛必达法则，等价无穷小，泰勒公式，拉格朗日中值</p>
+</li>
+<li><p>∞&#x2F;∞</p>
+<p>洛必达法则，分子分母同除以分子和分母各项中最高阶的无穷大</p>
+</li>
+<li><p>∞-∞</p>
+<p>通分化为0&#x2F;0（适用于分式差）</p>
+<p>根式有理化（适用于根式差）</p>
+<p>提无穷因子，然后等价替换或变量代换，泰勒公式</p>
+</li>
+<li><p>0×∞</p>
+<p>化为0&#x2F;0或∞&#x2F;∞</p>
+</li>
+<li><p>1^∞</p>
+<p><strong>利用结论</strong></p>
+<p>第一步：写标准型<br>$$<br>原式&#x3D;\lim(1+\alpha)^\beta<br>$$<br>第二步：求极限<br>$$<br>lim\alpha\beta &#x3D; A<br>$$<br>第三部：写结果<br>$$<br>原式&#x3D;e^A<br>$$<br><u>使用结论时必须是式子作为整体的时候才能用，若拆开有两个条件，一个是可拆，二是拆分后各部分的极限存在</u></p>
+<p>若不满足则立即换用通常方法，构造e^ln(……)</p>
+</li>
+<li><p>∞^0  0^0（x^x）</p>
+<p>将其改写成指数函数形式<br>$$<br>lim[f(x)]^{g(x)} &#x3D; lime^{g(x)lnf(x)}<br>$$<br>然后构造e^x-1~x的等价无穷小化繁为简</p>
+</li>
+</ul>
+<h2 id="3-连续"><a href="#3-连续" class="headerlink" title="3 连续"></a>3 连续</h2><h3 id="3-1-函数的连续与左右连续"><a href="#3-1-函数的连续与左右连续" class="headerlink" title="3.1 函数的连续与左右连续"></a>3.1 函数的连续与左右连续</h3><p>复合函数连续性的判断：内函数的值域不含外函数的间断点时连续，是否连续取决于外函数</p>
+<h3 id="3-2-闭区间连续函数性质"><a href="#3-2-闭区间连续函数性质" class="headerlink" title="3.2 闭区间连续函数性质"></a>3.2 闭区间连续函数性质</h3><h3 id="3-3-间断点"><a href="#3-3-间断点" class="headerlink" title="3.3 间断点"></a>3.3 间断点</h3><ul>
+<li>第一类间断点 该点左右极限都存在<ul>
+<li>可去间断点 左右极限相等但不等于该点值</li>
+<li>跳跃间断点 左右极限不相等</li>
+</ul>
+</li>
+<li>第二类间断点 该点左右极限至少有一个不存在<ul>
+<li>无穷间断点 左右极限至少有一个是无穷大</li>
+<li>振荡间断点 来回振荡，极限不存在</li>
+</ul>
+</li>
+</ul>
+<h1 id="第二章-一元函数微分学"><a href="#第二章-一元函数微分学" class="headerlink" title="第二章 一元函数微分学"></a>第二章 一元函数微分学</h1><h2 id="1-导数"><a href="#1-导数" class="headerlink" title="1 导数"></a>1 导数</h2><h3 id="1-1-导数与微分的概念"><a href="#1-1-导数与微分的概念" class="headerlink" title="1.1 导数与微分的概念"></a>1.1 导数与微分的概念</h3><p>导数的定义<br>$$<br>\lim_{x_0\rightarrow0}\frac{y_0-y}{x_0-x}&#x3D;\lim_{x_0\rightarrow0}\frac{f(x+x_0)-f(x)}{x_0}<br>$$</p>
+<h3 id="1-2-可导，可微，连续的关系"><a href="#1-2-可导，可微，连续的关系" class="headerlink" title="1.2 可导，可微，连续的关系"></a>1.2 可导，可微，连续的关系</h3><p>可导，可微 可互推，只能由可导可微推连续，连续不一定可导可微</p>
+<p>可导的条件：求函数在该点的左右导数，如果存在且相等，则函数在该点可导且连续</p>
+<p>连续的条件：求函数在该点的极限，如果存在且等于该点的值，则函数在该点连续</p>
+<h3 id="1-3-极值点，驻点，拐点"><a href="#1-3-极值点，驻点，拐点" class="headerlink" title="1.3 极值点，驻点，拐点"></a>1.3 极值点，驻点，拐点</h3><p>极值点是单调性发生变化的点，是函数的局部最大值或最小值</p>
+<p>驻点是一阶导数为零的点</p>
+<p>拐点是凹凸性变化的点，是二阶导数为零，三阶导数不为零的点，<strong>包含横坐标和纵坐标</strong></p>
+<p><strong>辨析：</strong></p>
+<p>驻点不一定是极值点，极值点不一定是驻点，可导函数（不管是一阶导还是二阶导）的极值点必定是他的驻点</p>
+<p>拐点的横坐标就是极值点</p>
+<p>可导情况下，如果驻点是拐点，则一定不是极值点，不可导情况下则有可能同时为拐点和极值点</p>
+<p><strong>极值点的判断方法：</strong></p>
+<ol>
+<li><p>求驻点，然后根据去心邻域内一阶导的正负性判断极值</p>
+</li>
+<li><p>判断驻点是否为极值点，求二阶导在该驻点的值，如果大于0为极小值，如果小于0为极大值，等于0则不是极值</p>
+</li>
+<li><p>$$<br>若f^{(1)}(x)&#x3D;f^{(2)}(x)&#x3D;….&#x3D;f^{(n-1)}(x)&#x3D;0\<br>且f^{(n)}(x)≠0<br>$$</p>
+<p>当n为偶数时，f(x)在x处有极值，大于零极小，小于零极大；当n为奇数时，f(x)在x处没有极值</p>
+</li>
+</ol>
+<p><strong>拐点的判断方法：</strong></p>
+<p>大体上与极值点的判断方法相同，只是高一阶</p>
+<h3 id="1-4-导数四则运算与复合函数求导"><a href="#1-4-导数四则运算与复合函数求导" class="headerlink" title="1.4 导数四则运算与复合函数求导"></a>1.4 导数四则运算与复合函数求导</h3><h3 id="1-5-函数的渐近线求法"><a href="#1-5-函数的渐近线求法" class="headerlink" title="1.5 函数的渐近线求法"></a>1.5 函数的渐近线求法</h3><p>函数的渐进线类型：垂直渐进线，水平渐进线，斜渐近线</p>
+<p>寻找路线：</p>
+<ol>
+<li>首先找不连续的点，如果此点的左右极限有一个趋于无穷，则为垂直渐近线</li>
+<li>再分别令x趋于正无穷，负无穷，如果极限存在，则有水平渐近线</li>
+<li>最后找斜渐进线，先求lim x-&gt;∞ f(x)&#x2F;x如果极限存在，则渐进线存在，斜率为a，再求lim x-&gt;∞ f(x)-ax，若极限存在且为b，则渐近线斜率为y&#x3D;ax+b</li>
+</ol>
+<h3 id="1-6-初等函数导数公式"><a href="#1-6-初等函数导数公式" class="headerlink" title="1.6 初等函数导数公式"></a>1.6 初等函数导数公式</h3><p>$$<br>(x^x) &#x3D; x^x(lnx+1)<br>$$</p>
+<p>$$<br>微分方程常用 (xe^x)^{(n)} &#x3D; e^x(x+n)<br>$$</p>
+<p>$$<br>分部积分常用 [ln(x+\sqrt{x^2+a})]^{(1)}&#x3D;\frac{1}{\sqrt{x^2+a}}<br>$$</p>
+<h3 id="1-7-求导法及题型"><a href="#1-7-求导法及题型" class="headerlink" title="1.7 求导法及题型"></a>1.7 求导法及题型</h3><p><em><strong>隐函数求导法</strong></em></p>
+<p>等式两边同时对x求导，注意y对x求导时除了按求导法则求导外还要再乘以一个y的导数</p>
+<p><em><strong>参数方程求导法</strong></em><br>$$<br>一阶导数：\frac{dy}{dx}&#x3D;\frac{\dot {y(t)}}{\dot {x(t)}}\<br>二阶导数：\frac{d^2y}{dx^2}&#x3D;\frac{d}{dt}\frac{\dot {y(t)}}{\dot {x(t)}}\frac{1}{\dot {x(t)}}分子分母同除dt<br>$$<br><em><strong>反函数求导法</strong></em><br>$$<br>反函数的一阶导数为：\frac{dx}{dy}&#x3D;\frac{1}{\dot y}\<br>反函数的二阶导数为：\frac{d^2x}{dy^2}&#x3D;\frac{d}{dx}(\frac{1}{\dot y})\frac{dx}{dy}分子分母同除dx<br>$$<br><em><strong>对数求导法</strong></em></p>
+<p>对于幂指函数，连乘，连除，开方，乘方等形式的函数一遍采用对数求导法，即<strong>两边取对数</strong></p>
+<p><em><strong>高阶导数</strong></em></p>
+<ol>
+<li>代公式</li>
+<li>求一阶导数，二阶导数，进而归纳n阶导数</li>
+<li>泰勒公式</li>
+</ol>
+<p><em><strong>包含定积分的复合函数求导及连续性判断</strong></em></p>
+<ol>
+<li>对于定积分内是(x,t)的函数，用换元法求导</li>
+<li>注意判断f(0)&#x3D;0的情况，分类讨论</li>
+<li>证明连续性，对导数取趋近于0的极限，如果与导数等于0时的值相等，即连续</li>
+</ol>
+<h2 id="2-导数应用"><a href="#2-导数应用" class="headerlink" title="2 导数应用"></a>2 导数应用</h2><h3 id="2-1-罗尔定理"><a href="#2-1-罗尔定理" class="headerlink" title="2.1 罗尔定理"></a>2.1 罗尔定理</h3><p>$$<br>连续,可导,f(a)&#x3D;f(b)\rightarrow∃x_0∈(a,b),f^1(x0)&#x3D; 0<br>$$</p>
+<p>用法：需要1.原函数（关键） 2.若干个使函数值相等的点</p>
+<ol>
+<li><p>$$<br>由f^1x,f^nx讨论零点存在性和个数<br>$$</p>
+</li>
+<li><p>$$<br>证明由x,f(x),f^1(x)组成的等式<br>$$</p>
+</li>
+</ol>
+<h3 id="2-2-拉格朗日中值定理"><a href="#2-2-拉格朗日中值定理" class="headerlink" title="2.2 拉格朗日中值定理"></a>2.2 拉格朗日中值定理</h3><p>$$<br>连续可导\rightarrow∃x_0∈(a,b),\frac{f(b)-f(a)}{b-a}&#x3D;f^1(x_0)<br>$$</p>
+<p>用法：</p>
+<ol>
+<li>求极限，利用拉格朗日中值定理去除外层函数，化繁为简</li>
+<li>证明等式，变形式子，找函数差f(b)-f(a)，并确定f^1(x0)是否为参数项</li>
+<li>证明不等式，变形式子，找f^1(x0)，得不等式</li>
+</ol>
+<h3 id="2-3-泰勒展开"><a href="#2-3-泰勒展开" class="headerlink" title="2.3 泰勒展开"></a>2.3 泰勒展开</h3><p>技巧：如何能快速确定精度，展开到几阶</p>
+<ol>
+<li><p>A&#x2F;B型，展开分子分母为同阶</p>
+</li>
+<li><p>A-B型，找幂次最低，分别展开AB，展开到他们的某一项系数不相等为止</p>
+</li>
+<li><p>复合函数双泰勒展开型，看所要求精度和内外层函数展开最低阶为多少</p>
+<p>内层最低阶数高，外层展开到该阶数，精度等于，外层展开阶数×内层最低阶数，则内层展开到该阶数</p>
+<p>外层最低阶数高，内层展开到该阶数，精度等于，外层最低阶数×内层展开阶数，则外层展开到该阶数</p>
+</li>
+</ol>
+<p>如何用：</p>
+<ol>
+<li><p>用于求解极限问题，用多项式代替复杂函数，从而化繁为简（用佩亚诺余项）</p>
+</li>
+<li><p>用于证明不等式&#x2F;等式<br>有端点和f^2(x)想到泰勒展开</p>
+<p>无f^1(x)，且有f(a+b&#x2F;2)想到在中点展开</p>
+</li>
+</ol>
+<h2 id="3-微分中值定理中构造辅助函数的方法"><a href="#3-微分中值定理中构造辅助函数的方法" class="headerlink" title="3 微分中值定理中构造辅助函数的方法"></a>3 微分中值定理中构造辅助函数的方法</h2><ol>
+<li><p><em><strong>积分原函数法</strong></em></p>
+<p>将待证明等式整理到等式一边，令这个式子等于F&#96;(x)，两边积分，得出F(x)</p>
+<p><strong>原函数法特别适合所证式子中包含f(x)和g(x)两个函数的情况。</strong></p>
+</li>
+<li><p><em><strong>微分方程法</strong></em></p>
+<p>将所证明的表达式看成是微分方程  ，从中求解F（y,x）&#x3D;0，然后忽略掉常数项，替换为F(f(x),x)就是我们要找的辅助函数了</p>
+</li>
+<li><p><em><strong>常用表格对照</strong></em></p>
+<p><img src="/Users/moon/Downloads/v2-2d7645a8c95f9e4960c8697be4521cb5_1440w.png" alt="v2-2d7645a8c95f9e4960c8697be4521cb5_1440w"></p>
+</li>
+</ol>
+<h1 id="第三章-一元函数积分学"><a href="#第三章-一元函数积分学" class="headerlink" title="第三章 一元函数积分学"></a>第三章 一元函数积分学</h1><h2 id="1-不定积分"><a href="#1-不定积分" class="headerlink" title="1 不定积分"></a>1 不定积分</h2><h3 id="1-1原函数概念"><a href="#1-1原函数概念" class="headerlink" title="1.1原函数概念"></a>1.1原函数概念</h3><p>性质：原函数推导函数，奇偶对换，周期相同；导函数推原函数，奇变偶不变，周期不继承</p>
+<p><strong>如果一个函数f(x)是一个非零的偶函数，那么在它的所有的原函数中只有一个是奇函数（这一个奇函数就是∫[0→x]f(x)dt），其他的原函数都是非奇非偶函数</strong></p>
+<p><strong>如果一个函数f(x)是以T为周期的周期函数，那么它的原函数减去x•(∫[0→T]f(t)dt)&#x2F;T一定也是以T为周期的周期函数，所以∫[0→T]f(t)dt&#x3D;0时原函数是周期函数</strong></p>
+<h4 id="1-1-1-原函数与定积分存在定理的辨析"><a href="#1-1-1-原函数与定积分存在定理的辨析" class="headerlink" title="1.1.1 原函数与定积分存在定理的辨析"></a>1.1.1 原函数与定积分存在定理的辨析</h4><ul>
+<li>在区间上有原函数不一定可积</li>
+<li>在区间上可积不一定有原函数</li>
+</ul>
+<p><strong>原函数存在定理:</strong></p>
+<ul>
+<li>函数在区间上连续，必有原函数</li>
+<li>振荡间断点有可能存在原函数</li>
+<li>可去间断点，跳跃间断点，无穷间断点，不存在原函数</li>
+</ul>
+<p><strong>定积分存在定理:</strong></p>
+<ul>
+<li>函数在闭区间内连续，则定积分存在</li>
+<li>函数在闭区间内有界，且只有有限个间断点，则定积分存在</li>
+<li>函数在闭区间上单调，则定积分存在</li>
+</ul>
+<h3 id="1-2-不定积分和定积分"><a href="#1-2-不定积分和定积分" class="headerlink" title="1.2 不定积分和定积分"></a>1.2 不定积分和定积分</h3><p>不定积分：求F(x)原函数，C值不定</p>
+<p>定积分：求面积，是个固定的数</p>
+<h3 id="1-3-不定积分基本公式"><a href="#1-3-不定积分基本公式" class="headerlink" title="1.3 不定积分基本公式"></a>1.3 不定积分基本公式</h3><h3 id="1-4-不定积分的性质"><a href="#1-4-不定积分的性质" class="headerlink" title="1.4 不定积分的性质"></a>1.4 不定积分的性质</h3><p>加减可拆性，常数可外挪</p>
+<h3 id="1-5-定积分中值定理"><a href="#1-5-定积分中值定理" class="headerlink" title="1.5 定积分中值定理"></a>1.5 定积分中值定理</h3><p>$$<br>f(x)在[a,b]上连续，则∃\xi∈[a,b]，有\int_{a}^{b}f(x)dx &#x3D;f(\xi)(b-a)<br>$$</p>
+<p>如何用：</p>
+<ul>
+<li><p>求极限（积分上下限之差与分子、分母同阶时使用）</p>
+</li>
+<li><p>积分估值<br>$$<br>\int_{a}^{b}f(x)dx，将f(x)当做常数，即可提出积分号，这个常数为f(\xi)，\int_{a}^{b}f(x)dx&#x3D;f(\xi)\int_{a}^{b}dx &#x3D; (b-a)f(\xi)<br>$$<br>易错点：一定要注意另一个函数不变号，否则不能提出</p>
+</li>
+</ul>
+<h3 id="1-6-1-凑微分法"><a href="#1-6-1-凑微分法" class="headerlink" title="1.6.1 凑微分法"></a>1.6.1 凑微分法</h3><h3 id="1-6-2-换元积分法"><a href="#1-6-2-换元积分法" class="headerlink" title="1.6.2 换元积分法"></a>1.6.2 换元积分法</h3><ol>
+<li><p>有根号+有平方<br>$$<br>\sqrt{a^2-x^2}\rightarrow x&#x3D;asint\<br>\sqrt{a^2+x^2}\rightarrow x&#x3D;atant\<br>\sqrt{x^2-a^2}\rightarrow x&#x3D;asect\<br>$$</p>
+</li>
+<li><p>有根号，无平方项<br>$$<br>t&#x3D;\sqrt{….}<br>$$</p>
+</li>
+<li><p>换掉arctanx，e^x等</p>
+</li>
+<li><p>倒代换，分母x最高次数高于分子2次以上时可用<br>$$<br>t&#x3D;\frac{1}{x}<br>$$</p>
+</li>
+<li><p>指数代换被积函数由a^x形式构成时用</p>
+</li>
+<li><p>三角函数换元法</p>
+</li>
+</ol>
+<p>助记：看见根号，无论用三角代换还是整体代换，目的是消除根号，使积分化难为易；看见分母高次，分子低次，使用倒代换；看到a^x形式，可令其为t，使指数式变成简单的含有形式便于积分</p>
+<h3 id="1-7-分部积分"><a href="#1-7-分部积分" class="headerlink" title="1.7 分部积分"></a>1.7 分部积分</h3><p>$$<br>(uv)^1 &#x3D; u^1v+uv^1\rightarrow uv&#x3D;\int u^1vdx+\int uv^1dx<br>$$</p>
+<p>$$<br>\int udv &#x3D; uv-\int vdu<br>$$</p>
+<p>$$<br>\int f(x)g^{(2)}(x)dx&#x3D;f(x)g^{(1)}(x)-f^{(1)}(x)g(x)+\int f^{(2)}(x)g(x)dx<br>$$</p>
+<p>如何用：<br>$$<br>若\int u^1vdx中v难处理，而v^1好处理，则可以通过分部积分转变，比较常见的难处理的v：反三角函数，对数函数等<br>$$<br>分部积分的优先级：<strong>DETAIL</strong> D表示dv，E指数函数，T三角函数，A代数函数，I反三角函数，L对数函数，越前面的放到里面的优先级越高</p>
+<h3 id="1-8-不定积分解题方法论"><a href="#1-8-不定积分解题方法论" class="headerlink" title="1.8 不定积分解题方法论"></a>1.8 不定积分解题方法论</h3><h4 id="1-8-1-有理函数积分"><a href="#1-8-1-有理函数积分" class="headerlink" title="1.8.1 有理函数积分"></a>1.8.1 有理函数积分</h4><ul>
+<li><p>$$<br>遇到包含(1+x^n)的式子，n位较高阶，想到可以构造成(1+x^{\frac{n}{3}})·(1-x^{\frac{n}{3}}+x^{\frac{2n}{3}})<br>$$</p>
+</li>
+<li><p><strong>遇到分式且包含根号</strong>，优先考虑把根号凑进微分里</p>
+</li>
+<li><p><strong>分式中遇到分母高次，分子低次的情况</strong>，考虑对分子进行加减相同数的操作，目的是使积分式分裂成两个易于积分的分式</p>
+</li>
+</ul>
+<h4 id="1-8-2-三角有理式积分"><a href="#1-8-2-三角有理式积分" class="headerlink" title="1.8.2 三角有理式积分"></a>1.8.2 三角有理式积分</h4><ul>
+<li><p><strong>遇到f(sinx,cosx)的式子</strong>，如果是sinx和cosx为加法关系，优先考虑万能代换，如果为乘法分式关系，优先考虑换元法</p>
+<p>一般方法（万能代换）：<br>$$<br>令tan\frac{x}{2}&#x3D;t\\sin x&#x3D;\frac{2t}{1+t^2}\ \cos x&#x3D;\frac{1-t^2}{1+t^2}\dt&#x3D;\frac{2}{1+t^2}<br>$$<br>特殊方法（三角变换，换元，分部）：<br>$$<br>若R(-\sin x ,\cos x)&#x3D;-R(\sin x,\cos x)，则令u&#x3D;\cos x\<br>若R(\sin x ,-\cos x)&#x3D;-R(\sin x,\cos x)，则令u&#x3D;\sin x\<br>若R(-\sin x ,-\cos x)&#x3D;R(\sin x,\cos x)，则令u&#x3D;\tan x<br>$$</p>
+</li>
+</ul>
+<h4 id="1-8-3-简单无理函数积分"><a href="#1-8-3-简单无理函数积分" class="headerlink" title="1.8.3 简单无理函数积分"></a>1.8.3 简单无理函数积分</h4><ul>
+<li>$$<br>遇到\int R(x,\sqrt{\frac{ax+b}{cx+b}})，令\sqrt{\frac{ax+b}{cx+b}}&#x3D;t，转化为有理函数积分进行运算<br>$$</li>
+</ul>
+<h2 id="2-定积分"><a href="#2-定积分" class="headerlink" title="2 定积分"></a>2 定积分</h2><h3 id="2-1-定积分的几何应用"><a href="#2-1-定积分的几何应用" class="headerlink" title="2.1 定积分的几何应用"></a>2.1 定积分的几何应用</h3><p>技巧：1.定变量 2.找微元 3.得积分</p>
+<p>定积分几何应用第一原理：</p>
+<ul>
+<li>分割（化整为零） 把整体化为n个小的曲边梯形</li>
+<li>近似替代（以直代曲）每个曲边梯形从小矩形面积代替</li>
+<li>求和（化整为零）累加所有小矩形面积</li>
+<li>取极限（整体近似）所有小矩形合并近似为整个大曲边梯形</li>
+</ul>
+<h3 id="2-2-定积分的物理应用"><a href="#2-2-定积分的物理应用" class="headerlink" title="2.2 定积分的物理应用"></a>2.2 定积分的物理应用</h3><h3 id="2-3-定积分的解题方法论"><a href="#2-3-定积分的解题方法论" class="headerlink" title="2.3 定积分的解题方法论"></a>2.3 定积分的解题方法论</h3><h4 id="2-3-1-利用公式"><a href="#2-3-1-利用公式" class="headerlink" title="2.3.1 利用公式"></a>2.3.1 利用公式</h4><p>三角函数点火公式<br>$$<br>\int_{0}^{\frac{\pi}{2}}\sin ^n xdx&#x3D;\int_{0}^{\frac{\pi}{2}}\cos ^n xdx&#x3D;\frac{n-1}{n}·\frac{n-3}{n-2}····\frac{1}{2}·\frac{\pi}{2}—–n为偶数\&#x3D;\frac{n-1}{n}·\frac{n-3}{n-2}····\frac{2}{3}—–n为大于1的奇数<br>$$</p>
+<p>$$<br>\int_{0}^{n\pi}xf(\sin x)dx&#x3D;\frac{n\pi}{2}\int_{0}^{n\pi}f(\sin x)<br>$$</p>
+<p>$$<br>\int_{0}^{2\pi}\cos^2xdx&#x3D;4\int_0^{\frac{\pi}{2}}\sin^2xdx&#x3D;\pi<br>$$</p>
+<h4 id="2-3-2-换元法"><a href="#2-3-2-换元法" class="headerlink" title="2.3.2 换元法"></a>2.3.2 换元法</h4><ul>
+<li><p>$$<br>形如\int_0^{\frac{\pi}{2}}\frac{\sin ^px}{\sin^px+\cos^px}dx和\int_0^{\frac{\pi}{2}}\frac{1}{1+\tan^px}dx\<br>令x&#x3D;\frac{\pi}{2}-t<br>$$</p>
+<p>这种换元法的特点是区间不变，一般可以用<br>$$<br>\int_a^bf(x)dx—x&#x3D;a+b-t—\int_a^bf(a+b-t)dt<br>$$</p>
+</li>
+</ul>
+<h2 id="3-积分进阶"><a href="#3-积分进阶" class="headerlink" title="3 积分进阶"></a>3 积分进阶</h2><h3 id="3-1-变限函数概念与求导"><a href="#3-1-变限函数概念与求导" class="headerlink" title="3.1 变限函数概念与求导"></a>3.1 变限函数概念与求导</h3><p>$$<br>\int_{g_1(x)}^{g_2(x)}f(t)dt &#x3D; \int_{a}^{g_2(x)}f(t)dt-\int_{a}^{g_1(x)}f(t)dt<br>$$</p>
+<p>公式：<br>$$<br>\frac{d}{dx}\int_{g_1(x)}^{g_2(x)}f(x,t)dt &#x3D; \int_{g_1(x)}^{g_2(x)}\frac{d}{dx}f(x,t)dt+f(x,g_2(x))g^{(1)}_2(x)-f(x,g_1(x))g^{(1)}_1(x)\<br>最好用换元法把(x,t)换为u再进行公式带入<br>$$<br>五大题型：</p>
+<ol>
+<li>变限+极限 洛必达求导</li>
+<li>被积函数为分段函数 讨论+拆积分区域</li>
+<li>被积函数为x可拆至∫外的复合函数 ，用公式</li>
+<li>被积函数为x不可拆至∫外的复合函数，用公式</li>
+<li>积分上限函数证明题</li>
+</ol>
+<h3 id="3-2-变上限积分的连续性与可导性判断"><a href="#3-2-变上限积分的连续性与可导性判断" class="headerlink" title="3.2 变上限积分的连续性与可导性判断"></a>3.2 变上限积分的连续性与可导性判断</h3><ul>
+<li>函数可积，原函数必然连续</li>
+<li>函数连续，则原函数必然可导；函数只有可去间断点，原函数必然可导；函数有跳跃间断点，原函数连续但不可导</li>
+</ul>
+<h3 id="3-3-积分不等式"><a href="#3-3-积分不等式" class="headerlink" title="3.3 积分不等式"></a>3.3 积分不等式</h3><p>常用方法：</p>
+<ul>
+<li><p>变量代换</p>
+</li>
+<li><p>积分中值定理</p>
+</li>
+<li><p>变上限积分</p>
+<p>将待求的定积分不等式转化为变上限积分不等式</p>
+</li>
+<li><p>柯西积分不等式<br>$$<br>看到函数的平方和导函数的平方想到柯西不等式：\int_a^bf(x)g(x)dx)^2≦\int_a^bf^2(x)dx\int_a^bg^2(x)dx<br>$$</p>
+</li>
+<li><p>公式：<br>$$<br>看到绝对值就要想起来的不等式：|\int_a^bf(x)dx|≦\int_a^b|f(x)|dx<br>$$</p>
+<p>$$<br>跟最值有关的不等式：m(b-a)≦\int_a^bf(x)dx≦M(b-a)其中m，M为(a,b)上的最小值和最大值<br>$$</p>
+</li>
+</ul>
+<h3 id="3-4-反常积分"><a href="#3-4-反常积分" class="headerlink" title="3.4 反常积分"></a>3.4 反常积分</h3><p>比较法的极限形式：高阶函数收敛则低阶函数收敛，低价函数发散则高阶函数发散</p>
+<h3 id="3-5-求积分函数"><a href="#3-5-求积分函数" class="headerlink" title="3.5 求积分函数"></a>3.5 求积分函数</h3><p>对于包含变上限积分函数的等式，要求积分函数，可两边同时求导；对于包含定积分函数的的等式，可将定积分函数视为常数，然后两边同时积分</p>
+<h1 id="第四章-常微分方程"><a href="#第四章-常微分方程" class="headerlink" title="第四章 常微分方程"></a>第四章 常微分方程</h1><h2 id="1-一阶微分方程"><a href="#1-一阶微分方程" class="headerlink" title="1 一阶微分方程"></a>1 一阶微分方程</h2><ol>
+<li><p>可分离变量的方程 两端积分</p>
+</li>
+<li><p>齐次方程 令u&#x3D;y&#x2F;x</p>
+</li>
+<li><p>线性方程<br>$$<br>一阶线性微分方程\dot y+P(x)y&#x3D;Q(x)\y&#x3D;e^{-\int P(x)dx}[\int Q(x)e^{\int P(x)dx}dx+C]<br>$$</p>
+</li>
+<li><p>伯努利方程 线性方程中Q(x)为高阶形式，令u&#x3D;y^1-n，将原方程化为一阶线性微分方程</p>
+</li>
+<li><p>全微分方程</p>
+</li>
+</ol>
+<h2 id="2-可降价的高阶方程"><a href="#2-可降价的高阶方程" class="headerlink" title="2 可降价的高阶方程"></a>2 可降价的高阶方程</h2><h3 id="2-1-可降阶的高阶方程"><a href="#2-1-可降阶的高阶方程" class="headerlink" title="2.1 可降阶的高阶方程"></a>2.1 可降阶的高阶方程</h3><ol>
+<li><p>$$<br>\ddot y&#x3D;f(x,\dot y)\<br>令\dot y&#x3D;p,\ddot y&#x3D;\dot p<br>$$</p>
+</li>
+<li><p>$$<br>\ddot y&#x3D;f(y,\dot y)\<br>令\dot y&#x3D;p,\ddot y&#x3D;p\frac{dp}{dy}<br>$$</p>
+</li>
+</ol>
+<h3 id="2-2-解的结构"><a href="#2-2-解的结构" class="headerlink" title="2.2 解的结构"></a>2.2 解的结构</h3><p>解的结构有四个定理，分别是：</p>
+<p>齐次方程的两个线性无关的特解可以构成这个方程的通解</p>
+<p>非齐次方程的通解由齐次方程的两个线性无关的特解和非齐次方程的一个特解构成</p>
+<p>如果y1和y2为非齐次方程的两个特解，则他们两之差等于齐次微分方程的解</p>
+<p>两个非齐次方程的特解相加为这两个非齐次方程非齐次项相加后的非齐次方程的特解</p>
+<h3 id="2-3-微分方程的一般形式"><a href="#2-3-微分方程的一般形式" class="headerlink" title="2.3 微分方程的一般形式"></a>2.3 微分方程的一般形式</h3><p>务必熟记</p>
+<h3 id="2-4-解题方法论"><a href="#2-4-解题方法论" class="headerlink" title="2.4 解题方法论"></a>2.4 解题方法论</h3><p><strong>欧拉方程</strong>：<br>$$<br>令x&#x3D;e^t\<br>x^ky^k&#x3D;D(D-1)…(D-k+1)y<br>$$<br><strong>知道解，找非齐次方程</strong>：首先找到两个线性无关的齐次解，就知道了齐次方程的特征方程，然后再用一个非齐次的特解带入即可得到非齐次方程</p>
+<h1 id="第五章-空间几何"><a href="#第五章-空间几何" class="headerlink" title="第五章 空间几何"></a>第五章 空间几何</h1><h2 id="1-空间向量"><a href="#1-空间向量" class="headerlink" title="1 空间向量"></a>1 空间向量</h2><h3 id="1-1-空间直角坐标"><a href="#1-1-空间直角坐标" class="headerlink" title="1.1 空间直角坐标"></a>1.1 空间直角坐标</h3><h3 id="1-2-向量表示与运算"><a href="#1-2-向量表示与运算" class="headerlink" title="1.2 向量表示与运算"></a>1.2 向量表示与运算</h3><h3 id="1-3-向量的数量积与向量积"><a href="#1-3-向量的数量积与向量积" class="headerlink" title="1.3 向量的数量积与向量积"></a>1.3 向量的数量积与向量积</h3><p>数量积：<br>$$<br>a·b&#x3D;|a||b|\cosθ 等于零时 垂直\<br>a·b&#x3D;a_xb_x+a_yb_y+a_zb_z<br>$$<br>向量积：<br>$$<br>|a×b|&#x3D;|a||b|\sinθ等于零时平行<br>$$</p>
+<h3 id="1-4-混合积"><a href="#1-4-混合积" class="headerlink" title="1.4 混合积"></a>1.4 混合积</h3><h3 id="1-5-方向余弦"><a href="#1-5-方向余弦" class="headerlink" title="1.5 方向余弦"></a>1.5 方向余弦</h3><p>$$<br>cos\alpha&#x3D;\frac{a}{\sqrt{a^2+b^2+c^2}}\<br>$$</p>
+<h2 id="2-空间几何"><a href="#2-空间几何" class="headerlink" title="2 空间几何"></a>2 空间几何</h2><h3 id="2-1-平面与空间直线"><a href="#2-1-平面与空间直线" class="headerlink" title="2.1 平面与空间直线"></a>2.1 平面与空间直线</h3><ul>
+<li><p>平面方程</p>
+<p>法向量n&#x3D;(A,B.C)，平面上的点(x0,y0,c0)<br>$$<br>一般式：Ax+By+Cz-(Ax_0+Bx_0+Cx_0)&#x3D;0\<br>点法式：A(x-x_0)+B(y-y_0)+C(z-z_0)&#x3D;0\<br>截距式：\frac{x}{a}+\frac{x}{b}+\frac{x}{c}&#x3D;1<br>$$</p>
+</li>
+<li><p>直线方程<br>$$<br>一般式：\begin{cases}<br>A_1x+B_1x+C_1x+D_1\<br>A_2x+B_2x+C_2x+D_2\<br>\end{cases}\<br>对称式：\frac{x-x_0}{l}&#x3D;\frac{y-y_0}{m}&#x3D;\frac{z-z_0}{n}\<br>参数式：x&#x3D;x_0+lt,y&#x3D;y_0+mt,z&#x3D;z_0+nt<br>$$</p>
+</li>
+</ul>
+<h3 id="2-2-曲面与空间曲线"><a href="#2-2-曲面与空间曲线" class="headerlink" title="2.2 曲面与空间曲线"></a>2.2 曲面与空间曲线</h3><ul>
+<li><p>曲面方程<br>$$<br>一般式:F(x,y,z)&#x3D;0<br>$$</p>
+</li>
+<li><p>空间曲线<br>$$<br>参数式:\begin{cases}<br>x&#x3D;x(t)\y&#x3D;y(t)\z&#x3D;z(t)<br>\end{cases}\<br>一般式:\begin{cases}<br>F(x,y,z)&#x3D;0\<br>G(x,y,z)&#x3D;0<br>\end{cases}<br>$$</p>
+</li>
+<li><p>旋转面</p>
+<p>平面曲线绕平面上一条直线旋转一周所形成的曲面</p>
+</li>
+<li><p>柱面</p>
+<p>平行于定直线并沿定曲线移动的直线L形成的轨迹，方程为关于x,y的二元方程f(x,y)&#x3D;0</p>
+</li>
+<li><p>二次曲面<br>$$<br>椭圆锥面:\frac{x^2}{a^2}+\frac{y^2}{b^2}&#x3D;z^2\<br>椭球面:\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}&#x3D;1\<br>椭圆抛物面：\frac{x^2}{a^2}+\frac{y^2}{b^2}&#x3D;z<br>$$<br><img src="http://staff.ustc.edu.cn/~rui/ppt/function-pictures/c-surface/tuoyuan-paowu.gif" alt="img" style="zoom:67%;"><img src="http://staff.ustc.edu.cn/~rui/ppt/function-pictures/c-surface/tuo-qiu.gif" alt="img" style="zoom:67%;"><img src="http://staff.ustc.edu.cn/~rui/ppt/function-pictures/c-surface/zuimian.gif" alt="img" style="zoom:67%;"></p>
+</li>
+</ul>
+<h3 id="2-3-曲面与曲线的切线与法线"><a href="#2-3-曲面与曲线的切线与法线" class="headerlink" title="2.3 曲面与曲线的切线与法线"></a>2.3 曲面与曲线的切线与法线</h3><ul>
+<li><p>曲面的切平面与法线<br>$$<br>曲面:F(x,y,z)&#x3D;0\<br>法线:n&#x3D;(\dot F(x),\dot F(y),\dot F(z))\<br>$$</p>
+</li>
+<li><p>曲线的切线与法平面<br>$$<br>曲线:\begin{cases}<br>F(x,y,z)&#x3D;0\<br>G(x,y,z)&#x3D;0<br>\end{cases}<br>\切线:\tau&#x3D;n_1×n_2<br>$$</p>
+</li>
+</ul>
+<h1 id="第五章-多元函数微分学"><a href="#第五章-多元函数微分学" class="headerlink" title="第五章 多元函数微分学"></a>第五章 多元函数微分学</h1><h2 id="1-重极限、连续、偏导数、全微分"><a href="#1-重极限、连续、偏导数、全微分" class="headerlink" title="1 重极限、连续、偏导数、全微分"></a>1 重极限、连续、偏导数、全微分</h2><h3 id="1-1-重极限"><a href="#1-1-重极限" class="headerlink" title="1.1 重极限"></a>1.1 重极限</h3><p><strong>求重极限</strong></p>
+<p>在求重极限中不能运用洛必达法则，但是可以使用夹逼定理和函数有界性等，所以解重极限的一般方法是用下列不等式，然后再用夹逼定理或者函数有界性求极限</p>
+<p>三个方法：</p>
+<ul>
+<li>利用极限性质（四则运算法则，夹逼定理）</li>
+<li>消去分母中极限为零的因子（有理化，等价无穷小）</li>
+<li>利用无穷小量与有界变量之积为无穷小量</li>
+</ul>
+<p>$$<br>f(x)\to0&#x3D;&#x3D;|f(x)|\to0\a^2+b^2≧2ab\|x|+|y|≧|x+y|<br>$$</p>
+<p><strong>证明重极限不存在</strong></p>
+<p>沿两种不同路径得到的极限不同（通常可取过(x0,y0)的直线）</p>
+<p><strong>全微分</strong><br>$$<br>Δz&#x3D;f(x_0+Δx,y_0+Δy)-f(x_0+y_0)&#x3D;AΔx+BΔy+o(\sqrt{(Δx)^2+(Δy)^2})\<br>$$</p>
+<p>可微性判定条件： </p>
+<p>必要条件：可微一定可导，可导不一定可微</p>
+<p><u>充分条件：偏导数连续一定可微，可微不一定偏导数连续</u></p>
+<p>需要知道充分条件的证明方法，用拉格朗日中值定理</p>
+<p>所以判定方法为先判定是否可导，如果不可导一定不可微，再代入定义 判定</p>
+<h2 id="2-偏导数与全微分的计算"><a href="#2-偏导数与全微分的计算" class="headerlink" title="2 偏导数与全微分的计算"></a>2 偏导数与全微分的计算</h2><h3 id="2-1-求具体点的偏导数及全微分"><a href="#2-1-求具体点的偏导数及全微分" class="headerlink" title="2.1 求具体点的偏导数及全微分"></a>2.1 求具体点的偏导数及全微分</h3><p>先代后求</p>
+<h3 id="2-2-求具体表达式的偏导数及全微分"><a href="#2-2-求具体表达式的偏导数及全微分" class="headerlink" title="2.2 求具体表达式的偏导数及全微分"></a>2.2 求具体表达式的偏导数及全微分</h3><p><strong>全微分相关：</strong><br>$$<br>P(x,y)dx+Q(x,y)dy&#x3D;dz\\frac{\partial P}{\partial y}&#x3D;\frac{\partial Q}{\partial x}<br>$$<br>已知全微分，求函数本身：①偏积分：构建两种积分的等价关系 ②凑微分：不好凑的放一起，好凑的放一起</p>
+<h3 id="2-3-求抽象函数的复合函数的偏导数及全微分"><a href="#2-3-求抽象函数的复合函数的偏导数及全微分" class="headerlink" title="2.3 求抽象函数的复合函数的偏导数及全微分"></a>2.3 求抽象函数的复合函数的偏导数及全微分</h3><p>结论1：<br>$$<br>若f(x,y)可微，则f(x,y)是n次齐次函数⇔x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}&#x3D;nf(x,y)<br>$$</p>
+<h3 id="2-4-隐函数求导法"><a href="#2-4-隐函数求导法" class="headerlink" title="2.4 隐函数求导法"></a>2.4 隐函数求导法</h3><p>方法</p>
+<ul>
+<li><p>公式<br>$$<br>\frac{\partial z}{\partial x}&#x3D;-\frac{\dot F_x}{\dot F_z}<br>$$</p>
+</li>
+<li><p>等式两边求导</p>
+</li>
+<li><p>利用微分形式不变性</p>
+</li>
+</ul>
+<h2 id="3-极值与最值"><a href="#3-极值与最值" class="headerlink" title="3 极值与最值"></a>3 极值与最值</h2><h3 id="3-1-无条件极值"><a href="#3-1-无条件极值" class="headerlink" title="3.1 无条件极值"></a>3.1 无条件极值</h3><p>极值判定的必要条件：偏导数等于0</p>
+<p>极值判定的充分条件：偏导数等于0，AC-B^2的正负性</p>
+<h3 id="3-2-条件极值及拉格朗日乘数法"><a href="#3-2-条件极值及拉格朗日乘数法" class="headerlink" title="3.2 条件极值及拉格朗日乘数法"></a>3.2 条件极值及拉格朗日乘数法</h3><p>构造拉格朗日函数<br>$$<br>F(x,y,\lambda)&#x3D;f(x,y)+\lambda\phi(x,y)<br>$$<br>然后求F对x，y，λ求偏导，偏导的值为0，解出的x，y为可能的极值</p>
+<h3 id="3-3-最大最小值"><a href="#3-3-最大最小值" class="headerlink" title="3.3 最大最小值"></a>3.3 最大最小值</h3><h2 id="4-方向导数"><a href="#4-方向导数" class="headerlink" title="4 方向导数"></a>4 方向导数</h2><h3 id="4-1-方向导数的概念及计算"><a href="#4-1-方向导数的概念及计算" class="headerlink" title="4.1 方向导数的概念及计算"></a>4.1 方向导数的概念及计算</h3><p><strong>方向导数的充分条件</strong></p>
+<p>可微或者偏导数连续，可微则方向导数一定存在，但是不可微方向导数也可能存在，方向导数存在不一定可微</p>
+<p><strong>方向导数和偏导数有什么区别</strong></p>
+<ol>
+<li>偏导数是沿平行于x轴&#x2F;y轴方向切开曲面形成那条曲线的导数</li>
+<li>偏导数是函数某维度（x&#x2F;y）的导，方向导数是函数在某点对某一方向的求导</li>
+</ol>
+<p><strong>方向导数的数学表达式怎么理解</strong><br>$$<br>\vec L决定了我们选选xoy平面上哪条射线切割曲面\<br>\vec{L}&#x3D;\left{x_0+cos\alpha,y_0+cos\beta\right}\<br>过哪点？(x_0,y_0)\<br>沿什么方向？(cos\alpha,cos\beta)<br>$$<br><strong>方向导数的定义式怎么理解</strong><br>$$<br>\lim_{t\to0^+}\frac{f(x_0+t		\cos\alpha,y_0+t\cos\beta)-f(x_0,y_0)}{t}&#x3D;\left.\frac{\partial f}{\partial \vec L }\right|_{(x_0,y_0)}&#x3D;f^{(1)}_x(x_0,y_0)\cos(\alpha)+f^{(1)}_y(x_0,y_0)\cos(\beta)<br>$$</p>
+<p><strong>方向导数的几何意义</strong></p>
+<p>做同时过L和z轴的平面，平面S垂直于xoy平面，S与函数所表示的曲面的交线为M，M与L的夹角为t，该函数的方向导数为tan t</p>
+<h3 id="4-2-梯度的概念与计算"><a href="#4-2-梯度的概念与计算" class="headerlink" title="4.2 梯度的概念与计算"></a>4.2 梯度的概念与计算</h3><p>公式：<br>$$<br>\frac{\partial g}{\partial L}&#x3D; |\vec {grad f}|·|\vec L|·\cosθ\<br>梯度：\vec{grad}f&#x3D;\left{f^{(1)}_x(x_0,y_0),f^{(1)}_y(x_0,y_0)\right}\<br>多元函数\to向量<br>$$</p>
+<h1 id="第六章-多元函数积分学"><a href="#第六章-多元函数积分学" class="headerlink" title="第六章 多元函数积分学"></a>第六章 多元函数积分学</h1><ul>
+<li>何时可以把曲面式子代入多元积分的被积函数中：①线面积分可以代入 ②重积分不可代入，用了格林公式或者高斯公式之后，线面积分转为了重积分，就不能代入了</li>
+</ul>
+<h2 id="1-二重积分"><a href="#1-二重积分" class="headerlink" title="1 二重积分"></a>1 二重积分</h2><h3 id="1-1-二重积分的性质"><a href="#1-1-二重积分的性质" class="headerlink" title="1.1 二重积分的性质"></a>1.1 二重积分的性质</h3><ul>
+<li><p>不等式性质<br>$$<br>f(x,y)≦g(x,y)\to\iint_Df(x,y)d\sigma≦\iint_Dg(x,y)d\sigma<br>$$</p>
+<p>$$<br>mS≦\iint_Df(x,y)d\sigma≦MS<br>$$</p>
+<p>$$<br>|\iint_Df(x,y)d\sigma|≦\iint_D|f(x,y)|d\sigma<br>$$</p>
+</li>
+<li><p>积分中值定理<br>$$<br>\iint_Df(x,y)d\sigma&#x3D;f(\xi,ƞ)S<br>$$</p>
+</li>
+</ul>
+<h3 id="1-2-二重积分解题方法"><a href="#1-2-二重积分解题方法" class="headerlink" title="1.2 二重积分解题方法"></a>1.2 二重积分解题方法</h3><p><strong>逐次积分</strong></p>
+<ol>
+<li>拆开积分，用于表达式不唯一</li>
+<li>对称简化，积分区域关于x y轴对称，且被积函数关于x y为奇函数 偶函数</li>
+<li>积分次序改变</li>
+<li>坐标互换，出现平方，且用直角坐标搞不定的时候换成极坐标来做</li>
+<li>常见积分值</li>
+</ol>
+<p><strong>对于圆心不在原点的圆：</strong></p>
+<p>平移加极坐标（x-n&#x3D;rcosθ)</p>
+<p><strong>形心公式</strong><br>$$<br>细棒：\overline x&#x3D;\frac{\int_a^bxdx}{b-a}&#x3D;<br>\平面板：\overline x&#x3D;\frac{\iint_Dxd\sigma}{S}<br>$$<br><strong>证明二重积分等于定积分：</strong></p>
+<p>把二重积分换成累次积分，如果还算不了就，换元法，交换次序</p>
+<h2 id="2-三重积分"><a href="#2-三重积分" class="headerlink" title="2 三重积分"></a>2 三重积分</h2><p>$$<br>\iiint_\Omega f(x,y,z)dV<br>$$</p>
+<p><strong>计算方法：</strong></p>
+<ul>
+<li><p>直角坐标（先二后一，先一后二）</p>
+</li>
+<li><p>柱坐标（本质是极坐标与直角坐标的结合）<br>$$<br>\iiint_\Omega f(x,y,z)dV&#x3D;\iiint_\Omega f(r\cos\theta,r\sin\theta,z)rdrd\theta dz\<br>适合用的函数:f(\sqrt{x^2+y^2})\Phi(z)\<br>适合用的\Omega区域:中心为z轴的图形<br>$$</p>
+</li>
+<li><p>球坐标（空间域的极坐标）<br>$$<br>\iiint_\Omega f(x,y,z)dV&#x3D;\iiint_\Omega f(r\sin\phi\cos\theta,r\sin\phi\sin\theta,r\cos\phi)r^2\sin\phi drd\phi d\theta\<br>适合用的函数:f(\sqrt{x^2+y^2+z^2})\<br>适合用的\Omega区域:中心为原点的图形<br>$$</p>
+</li>
+<li><p>奇偶性 同二重积分</p>
+</li>
+<li><p>利用变量的对称性 通常用来求解不适合与球坐标和柱坐标的题目</p>
+</li>
+</ul>
+<p><strong>判断用哪种方法</strong></p>
+<ul>
+<li>适合先二后一的：①被积函数为f(z)的一元函数 ②用z&#x3D;z的平面去截区域的截痕面积好求   先对xy求，最后对z求</li>
+<li>求三重积分的累次积分，需要交换次序，采用降维方法，每次交换只看两个变量，在二维平面上进行交换</li>
+</ul>
+<h2 id="3-曲线积分"><a href="#3-曲线积分" class="headerlink" title="3 曲线积分"></a>3 曲线积分</h2><h3 id="3-1-二类曲线积分运算"><a href="#3-1-二类曲线积分运算" class="headerlink" title="3.1 二类曲线积分运算"></a>3.1 二类曲线积分运算</h3><ol>
+<li><p><strong>对弧长的线积分</strong><br>$$<br>第一类：\int_{L}f(x,y)ds<br>$$<br>关键在于转化ds，通常有3种方法：<br>$$<br>直角坐标+平面曲线：ds&#x3D;\sqrt{(△x)^2+(△y)^2}&#x3D;\sqrt{1+{y^{(1)} }^2}dx\<br>参数式+平面坐标：ds&#x3D;\sqrt{(x^{(1)}(t))^2+(y^{(1)}(t))^2}dt\<br>极坐标+平面曲线： ds&#x3D;\sqrt{ {r^{(1)} }^2+r^2}dθ\<br>空间曲线：ds&#x3D;\sqrt{(x^{(1)}(t))^2+(y^{(1)}(t))^2+(z^{(1)}(t))^2}dt<br>$$</p>
+</li>
+<li><p><strong>对坐标的线积分</strong></p>
+<p>变力沿曲线做工，P(x,y)为力沿x轴的分力所做的功，Q(x,y)为力沿y轴的分力所做的功</p>
+</li>
+</ol>
+<p>$$<br>第二类： \int_LP(x,y)dx+Q(x,y)dy<br>$$</p>
+<p><strong>平面线积分</strong></p>
+<ul>
+<li><p>有参数，可以化为定积分</p>
+</li>
+<li><p>$$<br>x&#x3D;x(t),y&#x3D;y(t)\dx&#x3D;x^{(1)}dt\dy&#x3D;y^{(1)}dt<br>$$</p>
+</li>
+<li><p>化为二重积分，格林公式，万能公式，但是有两点需要注意</p>
+</li>
+<li><p>L是封闭，否则补成封闭曲线</p>
+</li>
+<li><p>被积函数在L围成区域内均存在，否则挖洞</p>
+</li>
+</ul>
+<p><strong>空间线积分</strong></p>
+<ul>
+<li><p>利用原函数解决</p>
+</li>
+<li><p><strong>斯托克斯公式</strong>（空间坐标系中的格林公式）</p>
+</li>
+<li><p>$$<br>\oint P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz \<br>&#x3D;\iint_\Sigma\begin{vmatrix}<br>\cos\alpha&amp;\cos\beta&amp;\cos\gamma\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\P&amp;Q&amp;R<br>\end{vmatrix}dS<br>\&#x3D;\iint_D(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z})dydz+(\frac{\partial R}{\partial x}-\frac{\partial P}{\partial z})dxdz+(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})dxdy<br>$$</p>
+</li>
+<li><p>换元，化为平面线积分，降维的方法</p>
+</li>
+</ul>
+<p>技巧总结：</p>
+<ol>
+<li><p>利用曲线表达式化简被积函数</p>
+</li>
+<li><p>利用奇偶性化简积分，简化计算</p>
+<p>曲线L关于y&#x2F;x轴堆成+函数关于x&#x2F;y成奇&#x2F;偶，可用对称</p>
+</li>
+<li><p>利用轮换对称性简化计算，曲线积分中，各变量换位置，曲线表达不变，则可用轮换对称</p>
+</li>
+<li><p>利用曲线形心公式快速计算<br>$$<br>\bar x &#x3D; \frac{\int_Lxds}{\int_Lds}<br>$$</p>
+</li>
+</ol>
+<h3 id="3-2-格林公式-路径无关"><a href="#3-2-格林公式-路径无关" class="headerlink" title="3.2 格林公式+路径无关"></a>3.2 格林公式+路径无关</h3><p><strong>格林公式</strong>：第二类曲线积分  转化为——  二重积分</p>
+<p>该公式是连接第二类曲线积分与二重积分的桥梁<br>$$<br>\oint P(x,y)dx+Q(x,y)dy &#x3D; \iint_D(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})d\sigma<br>$$<br>公式中，L为逆时针，若L为顺时针，公式右边需加上负号</p>
+<p>前提：①L是封闭，否则补成封闭曲线②被积函数在L围成区域内均存在，否则挖洞</p>
+<p>当不满足上述前提时</p>
+<p>某点处不连续——挖洞</p>
+<p>L不封闭——构造若干条与x,y平行的直线，将L补全成封闭曲线</p>
+<p><strong>路径无关</strong>：<br>$$<br>对于经过A，B任一分段光滑曲线L，都有\oint_LPdx+Qdy &#x3D; 0<br>$$<br>若P，Q在D上具有一阶连续偏导数，则有格林公式，由于L任意性，可得DL任意性，对于D中每一点均有<br>$$<br>\frac{\partial Q}{\partial x}&#x3D;\frac{\partial P}{\partial y}<br>$$<br>怎么用+技巧总结：</p>
+<ul>
+<li>利用原函数解决第二类曲线积分</li>
+<li>构造曲线简化积分运算，改换路径</li>
+</ul>
+<p><strong>线积分与路径无关的判定定理</strong></p>
+<p>设函数在单连通域D上有一阶连续偏导数，则以下四条等价<br>$$<br>1.线积分\int_L Pdx+Qdy与路径无关\<br>2.\oint_LPdx+Qdy&#x3D;0\<br>3.\frac{\partial P}{\partial y}&#x3D;\frac{\partial Q}{\partial x}（常用来判定是否路径无关）\<br>4.P(x,y)dx+Q(x,y)dy&#x3D;dF(x,y)<br>$$</p>
+<p><strong>第二类线积分解题思路：</strong></p>
+<p>先看路径是否为封闭，如果封闭首选格林公式，如果不封闭再看是否路径无关，如果路径无关就用路径无关的方法，如果路径不无关，要么补线用格林公式，要么利用原函数牛顿莱布尼茨公式</p>
+<p><strong>重要结论！！！</strong><br>$$<br>对于线积分\int\frac{ydx-xdy}{x^2+y^2},P&#x3D;\frac{y}{x^2+y^2},Q&#x3D;\frac{-x}{x^2+y^2}\除原点(0,0以外),P,Q有连续一阶偏导数\且\frac{\partial P}{\partial y}&#x3D;\frac{\partial Q}{\partial x},(x,y)\neq(0,0)\\则\沿任何一条不包含原点在内的分段光滑闭曲线的积分为零\<br>沿任何一条包含原点在内的分段光滑闭曲线的积分均相等<br>$$</p>
+<h2 id="4-曲面积分"><a href="#4-曲面积分" class="headerlink" title="4 曲面积分"></a>4 曲面积分</h2><h3 id="4-1-两类曲面积分的运算"><a href="#4-1-两类曲面积分的运算" class="headerlink" title="4.1 两类曲面积分的运算"></a>4.1 两类曲面积分的运算</h3><ol>
+<li><p>$$<br>第一类：\iint_\Sigma f(x,y,z)ds<br>$$</p>
+<p>关键在曲面投影域的计算：<br>$$<br>ds&#x3D;\sqrt{1+\dot Z_x^2+\dot Z_t^2}dxdy\<br>Z&#x3D;g(x,y)\<br>\Sigma\to D_{xoy}\<br>最终可得：\iint_\Sigma f(x,y,z)ds&#x3D;\iint_{Dxy}f(x,y,Z(x,y))\sqrt{1+\dot Z_x^2+\dot Z_t^2}dxdy<br>$$</p>
+</li>
+<li><p>$$<br>第二类：\iint_\Sigma P(x,y,z)dydz+Q(x,y,z)dxdz+R(x,y,z)dxdy<br>$$</p>
+<p>方法是将曲面投影（有方向）</p>
+<p><strong>待补充</strong></p>
+</li>
+</ol>
+<p><strong>技巧总结</strong></p>
+<ul>
+<li><p>把曲面方程带入被积函数中简化运算</p>
+</li>
+<li><p>利用奇偶性简化运算</p>
+</li>
+<li><p>利用轮换对称性简化计算</p>
+</li>
+</ul>
+<p><strong>高斯公式计算第二类曲面积分</strong><br>$$<br>\oiint_\Sigma Pdydz+Qdzdx+Rdxdy&#x3D;\iiint_\Omega(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})dv<br>$$</p>
+<h1 id="第七章-无穷级数"><a href="#第七章-无穷级数" class="headerlink" title="第七章 无穷级数"></a>第七章 无穷级数</h1><h2 id="1-常数项级数"><a href="#1-常数项级数" class="headerlink" title="1 常数项级数"></a>1 常数项级数</h2><h3 id="1-1-级数基本性质"><a href="#1-1-级数基本性质" class="headerlink" title="1.1 级数基本性质"></a>1.1 级数基本性质</h3><ol>
+<li><p>$$<br>若\sum_{n&#x3D;1}^\infty u_n收敛于S，则\sum_{n&#x3D;1}^\infty ku_n也收敛，其和为kS<br>$$</p>
+</li>
+<li><p>$$<br>若\sum_{n&#x3D;1}^\infty u_n,\sum_{n&#x3D;1}^\infty v_n收敛于S，则\sum_{n&#x3D;1}^\infty (u_n+v_n)收敛于S+\sigma<br>$$</p>
+</li>
+<li><p>$$<br>在级数中去掉加上改变 有限项，不会改变级数的敛散性<br>$$</p>
+</li>
+<li><p>$$<br>级数加括号以后收敛，原级数不一定收敛\级数加括号以后发散，原级数一定发散<br>$$</p>
+</li>
+<li><p>$$<br>级数收敛的必要条件：若级数\sum_{n&#x3D;1}^\infty u_n收敛则\lim_{n\to\infty}u_n&#x3D;0<br>$$</p>
+</li>
+</ol>
+<h3 id="1-2-判断正项级数敛散性的方法"><a href="#1-2-判断正项级数敛散性的方法" class="headerlink" title="1.2 判断正项级数敛散性的方法"></a>1.2 判断正项级数敛散性的方法</h3><ol>
+<li><p>比较判别法</p>
+</li>
+<li><p>比较法极限形式（充分条件，不能反推）<br>$$<br>\sum_{n&#x3D;1}^\infty\frac{1}{n^p},当p&gt;1收敛，p&lt;&#x3D;1发散\<br>\sum_{n&#x3D;1}^\infty aq^n,当q&gt;&#x3D;1发散，q&lt;1收敛<br>$$</p>
+</li>
+<li><p>比值法<br>$$<br>若\lim_{n\to\infty}\frac{u_{n+1}}{u_n}&#x3D;\alpha,则\sum_{n&#x3D;1}^\infty&#x3D;u_n\\alpha&gt;1发散\<br>\alpha&lt;1收敛\\alpha&#x3D;1不一定<br>$$</p>
+</li>
+<li><p>根值法<br>$$<br>若\lim_{n\to\infty}\sqrt[n]{u^n}&#x3D;\alpha,则\sum_{n&#x3D;1}^\infty&#x3D;u_n\\alpha&gt;1发散\<br>\alpha&lt;1收敛\\alpha&#x3D;1不一定<br>$$<br>使用场景（比值根值）：<br>$$<br>a^n（根值）,n!（比值）,n^n（根值）<br>$$</p>
+</li>
+<li><p>积分判别法<br>$$<br>设f(x)是[1,\infty)上单调减，非负的连续函数，且a_n&#x3D;f(n)，则\sum_{n&#x3D;1}^\infty a_n与\int_1^{+\infty}f(x)dx同敛散<br>$$<br>使用场景:<br>$$<br>\sum_{n&#x3D;1}^\infty \frac{1}{n^p},\sum_{n&#x3D;2}^\infty\frac{1}{n\ln^pn}<br>$$</p>
+</li>
+</ol>
+<p>遇到正项级数的思维路线：先看是否适用积分判别法的使用场景，再看比值根值法的使用场景，最后考虑比较法</p>
+<h3 id="1-3-交错级数"><a href="#1-3-交错级数" class="headerlink" title="1.3 交错级数"></a>1.3 交错级数</h3><p>莱布尼茨准则<br>$$<br>u_n单调减,\lim_{n\to\infty}u_n&#x3D;0则\sum_{n&#x3D;1}^\infty(-1)^{n-1}u_n收敛<br>$$</p>
+<h3 id="1-4-任意性级数"><a href="#1-4-任意性级数" class="headerlink" title="1.4 任意性级数"></a>1.4 任意性级数</h3><ul>
+<li><p>绝对收敛 数列的绝对值收敛，则数列一定收敛，<u>一般情况下绝对值级数发散不能推原级数发散，但是如果用比值法或者根值法推出来绝对值级数发散，那么可以直接视为原级数发散</u></p>
+</li>
+<li><p>条件收敛 数列收敛，数列的绝对值发散</p>
+</li>
+<li><p>绝对收敛+-条件收敛&#x3D;条件收敛</p>
+<p>绝对收敛+-绝对收敛&#x3D;绝对收敛</p>
+<p>条件收敛+-条件收敛&#x3D;绝对收敛或条件收敛</p>
+</li>
+</ul>
+<h3 id="1-5-常用解题方法论"><a href="#1-5-常用解题方法论" class="headerlink" title="1.5 常用解题方法论"></a>1.5 常用解题方法论</h3><ul>
+<li><p>$$<br>遇到\lim u_n·f(n)&#x3D;a，让求u_n的敛散性，转化为\lim\frac{u_n}{f(x)}的形式，则u_n和f(n)同敛散<br>$$</p>
+</li>
+<li><p>$$<br>\sum_{n&#x3D;1}^\infty |u_n|收敛则\sum_{n&#x3D;1}^\infty u_n^2收敛<br>$$</p>
+</li>
+</ul>
+<h2 id="2-幂级数"><a href="#2-幂级数" class="headerlink" title="2 幂级数"></a>2 幂级数</h2><h3 id="2-1-收敛半径，收敛区间，收敛域"><a href="#2-1-收敛半径，收敛区间，收敛域" class="headerlink" title="2.1 收敛半径，收敛区间，收敛域"></a>2.1 收敛半径，收敛区间，收敛域</h3><ul>
+<li><p><strong>阿贝尔定理</strong><br>$$<br>\sum_{n&#x3D;0}^\infty a_nx^n在点x&#x3D;x_0处条件收敛，则x_0为幂级数收敛区间的一个端点<br>$$</p>
+</li>
+<li><p>$$<br>\lim_{n\to\infty}|\frac{a_{n+1}}{a_n}|&#x3D;ρ,R&#x3D;\frac{1}{ρ}\\lim_{n\to\infty}\sqrt[n]{|a_n|}&#x3D;ρ,R&#x3D;\frac{1}{ρ}\对于只有偶次项或者奇次项的幂级数求收敛半径时R&#x3D;\sqrt{\frac{1}{ρ}}<br>$$</p>
+</li>
+</ul>
+<h3 id="2-2-幂级数的性质"><a href="#2-2-幂级数的性质" class="headerlink" title="2.2 幂级数的性质"></a>2.2 幂级数的性质</h3><ul>
+<li><p>有理运算性质<br>$$<br>\sum_{n&#x3D;0}^\infty a_nx^n·\sum_{n&#x3D;0}^\infty b_nx^n&#x3D;\sum_{n&#x3D;0}^\infty c_nx^n\c_n&#x3D;a_0b_n+a_1b_{n-1}+a_2b_{n-2}+….+a_nb_0<br>$$</p>
+</li>
+<li><p>分析性质</p>
+<p>和函数连续，可导，可积，收敛半径不变</p>
+</li>
+</ul>
+<h3 id="2-3-函数的幂级数展开"><a href="#2-3-函数的幂级数展开" class="headerlink" title="2.3 函数的幂级数展开"></a>2.3 函数的幂级数展开</h3><ul>
+<li>一般用间接法：把f(x)求导，导函数化为幂级数，再把幂级数积分，转化的过程中有可能出现项数丢失的现象，记得补上</li>
+<li><strong>求高阶导数（n阶导数</strong>），用幂级数展开构建a_n与f^n(x)的等式关系</li>
+</ul>
+<h3 id="2-4-级数求和（重难点）"><a href="#2-4-级数求和（重难点）" class="headerlink" title="2.4 级数求和（重难点）"></a>2.4 级数求和（重难点）</h3><p>思路与函数的幂级数展开相反</p>
+<ul>
+<li><p><strong>常用级数</strong><br>$$<br>\sum_{n&#x3D;0}^\infty \frac{x^n}{n}&#x3D;-\ln(1-x)\<br>\sum_{n&#x3D;0}^\infty \frac{(-1)^{n-1}x^{2n-1}}{2n-1}&#x3D; \arctan x<br>$$</p>
+</li>
+<li><p><strong>求常数项级数的和</strong>：把常数项级数求和转换成幂级数求和在特定x值上的值</p>
+</li>
+<li><p><strong>注意</strong> 在求和的过程中，如果级数并不是从第一项开始的，那么就要减去缺失的那两项，比如原式从第二项开始，再转化为和函数之后还要减去第零项和第一项的值</p>
+</li>
+<li><p><strong>注意</strong> 对和函数S(x)求导时，每求一次导，级数的起始值加1<br>$$<br>S(x)&#x3D;\sum_{n&#x3D;0}^\infty a_nx^n\\dot{S(x)}&#x3D;\sum_{n&#x3D;1}^\infty na_nx^{n-1}<br>$$</p>
+</li>
+<li><p>通过求导，来构建关于S(x)的微分方程，进而求S(x)</p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%87%BD%E6%95%B0%EF%BC%8C%E6%9E%81%E9%99%90%EF%BC%8C%E8%BF%9E%E7%BB%AD"><span class="toc-number">1.</span> <span class="toc-text">第一章 函数，极限，连续</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%87%BD%E6%95%B0%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 函数概念与表示法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 复合函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%88%86%E6%AE%B5%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 分段函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0%E6%80%A7%E8%B4%A8"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4 初等函数性质</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-1-%E5%A5%87%E5%87%BD%E6%95%B0-%E5%81%B6%E5%87%BD%E6%95%B0-%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">1.4.1 奇函数 偶函数 周期函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-%E5%87%BD%E6%95%B0%E7%9A%84%E6%9C%89%E7%95%8C%E6%80%A7"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.4.2 函数的有界性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-2-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0%E5%9B%BE%E5%BD%A2"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">1.4.2 初等函数图形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">1.5 参数方程表示的函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9E%81%E9%99%90"><span class="toc-number">1.2.</span> <span class="toc-text">2 极限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%9E%81%E9%99%90%EF%BC%8C%E5%B7%A6%E5%8F%B3%E6%9E%81%E9%99%90%EF%BC%8C%E5%AD%98%E5%9C%A8%E6%80%A7"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 极限，左右极限，存在性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9E%81%E9%99%90%E6%80%A7%E8%B4%A8%E4%B8%8E%E8%BF%90%E7%AE%97%E6%B3%95%E5%88%99"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 极限性质与运算法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%9E%81%E9%99%90%E5%AD%98%E5%9C%A8%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%87%86%E5%88%99"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 极限存在的两个准则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%95%B0%E5%88%97%E6%94%B6%E6%95%9B%E4%B8%8E%E6%B1%82%E6%95%B0%E5%88%97%E7%9A%84%E6%9E%81%E9%99%90"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 数列收敛与求数列的极限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.5 两个重要极限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-%E6%97%A0%E7%A9%B7%E5%B0%8F"><span class="toc-number">1.2.6.</span> <span class="toc-text">2.6 无穷小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-%E6%97%A0%E7%A9%B7%E5%B0%8F%E6%AF%94%E9%98%B6"><span class="toc-number">1.2.7.</span> <span class="toc-text">2.7 无穷小比阶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-%E6%B1%82%E6%9E%81%E9%99%90%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.8.</span> <span class="toc-text">2.8 求极限常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-9-%E6%B1%82%E6%9E%81%E9%99%90%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B"><span class="toc-number">1.2.9.</span> <span class="toc-text">2.9 求极限常见题型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BF%9E%E7%BB%AD"><span class="toc-number">1.3.</span> <span class="toc-text">3 连续</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E4%B8%8E%E5%B7%A6%E5%8F%B3%E8%BF%9E%E7%BB%AD"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 函数的连续与左右连续</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%97%AD%E5%8C%BA%E9%97%B4%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0%E6%80%A7%E8%B4%A8"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 闭区间连续函数性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E9%97%B4%E6%96%AD%E7%82%B9"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 间断点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6"><span class="toc-number">2.</span> <span class="toc-text">第二章 一元函数微分学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AF%BC%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">1 导数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.1 导数与微分的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%8F%AF%E5%AF%BC%EF%BC%8C%E5%8F%AF%E5%BE%AE%EF%BC%8C%E8%BF%9E%E7%BB%AD%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">2.1.2.</span> <span class="toc-text">1.2 可导，可微，连续的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%9E%81%E5%80%BC%E7%82%B9%EF%BC%8C%E9%A9%BB%E7%82%B9%EF%BC%8C%E6%8B%90%E7%82%B9"><span class="toc-number">2.1.3.</span> <span class="toc-text">1.3 极值点，驻点，拐点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%AF%BC%E6%95%B0%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%E4%B8%8E%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0%E6%B1%82%E5%AF%BC"><span class="toc-number">2.1.4.</span> <span class="toc-text">1.4 导数四则运算与复合函数求导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E5%87%BD%E6%95%B0%E7%9A%84%E6%B8%90%E8%BF%91%E7%BA%BF%E6%B1%82%E6%B3%95"><span class="toc-number">2.1.5.</span> <span class="toc-text">1.5 函数的渐近线求法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0%E5%AF%BC%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="toc-number">2.1.6.</span> <span class="toc-text">1.6 初等函数导数公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-%E6%B1%82%E5%AF%BC%E6%B3%95%E5%8F%8A%E9%A2%98%E5%9E%8B"><span class="toc-number">2.1.7.</span> <span class="toc-text">1.7 求导法及题型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AF%BC%E6%95%B0%E5%BA%94%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text">2 导数应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%BD%97%E5%B0%94%E5%AE%9A%E7%90%86"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1 罗尔定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2 拉格朗日中值定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.3 泰勒展开</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E4%B8%AD%E6%9E%84%E9%80%A0%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">3 微分中值定理中构造辅助函数的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E5%AD%A6"><span class="toc-number">3.</span> <span class="toc-text">第三章 一元函数积分学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.</span> <span class="toc-text">1 不定积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E5%8E%9F%E5%87%BD%E6%95%B0%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.1.</span> <span class="toc-text">1.1原函数概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1-%E5%8E%9F%E5%87%BD%E6%95%B0%E4%B8%8E%E5%AE%9A%E7%A7%AF%E5%88%86%E5%AD%98%E5%9C%A8%E5%AE%9A%E7%90%86%E7%9A%84%E8%BE%A8%E6%9E%90"><span class="toc-number">3.1.1.1.</span> <span class="toc-text">1.1.1 原函数与定积分存在定理的辨析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%92%8C%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.2.</span> <span class="toc-text">1.2 不定积分和定积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%9F%BA%E6%9C%AC%E5%85%AC%E5%BC%8F"><span class="toc-number">3.1.3.</span> <span class="toc-text">1.3 不定积分基本公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">3.1.4.</span> <span class="toc-text">1.4 不定积分的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E5%AE%9A%E7%A7%AF%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86"><span class="toc-number">3.1.5.</span> <span class="toc-text">1.5 定积分中值定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-1-%E5%87%91%E5%BE%AE%E5%88%86%E6%B3%95"><span class="toc-number">3.1.6.</span> <span class="toc-text">1.6.1 凑微分法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-2-%E6%8D%A2%E5%85%83%E7%A7%AF%E5%88%86%E6%B3%95"><span class="toc-number">3.1.7.</span> <span class="toc-text">1.6.2 换元积分法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.8.</span> <span class="toc-text">1.7 分部积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="toc-number">3.1.9.</span> <span class="toc-text">1.8 不定积分解题方法论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8-1-%E6%9C%89%E7%90%86%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.9.1.</span> <span class="toc-text">1.8.1 有理函数积分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8-2-%E4%B8%89%E8%A7%92%E6%9C%89%E7%90%86%E5%BC%8F%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.9.2.</span> <span class="toc-text">1.8.2 三角有理式积分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8-3-%E7%AE%80%E5%8D%95%E6%97%A0%E7%90%86%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86"><span class="toc-number">3.1.9.3.</span> <span class="toc-text">1.8.3 简单无理函数积分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="toc-number">3.2.</span> <span class="toc-text">2 定积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8"><span class="toc-number">3.2.1.</span> <span class="toc-text">2.1 定积分的几何应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E7%89%A9%E7%90%86%E5%BA%94%E7%94%A8"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.2 定积分的物理应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%AE%9A%E7%A7%AF%E5%88%86%E7%9A%84%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="toc-number">3.2.3.</span> <span class="toc-text">2.3 定积分的解题方法论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-%E5%88%A9%E7%94%A8%E5%85%AC%E5%BC%8F"><span class="toc-number">3.2.3.1.</span> <span class="toc-text">2.3.1 利用公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-%E6%8D%A2%E5%85%83%E6%B3%95"><span class="toc-number">3.2.3.2.</span> <span class="toc-text">2.3.2 换元法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%A7%AF%E5%88%86%E8%BF%9B%E9%98%B6"><span class="toc-number">3.3.</span> <span class="toc-text">3 积分进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%8F%98%E9%99%90%E5%87%BD%E6%95%B0%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%B1%82%E5%AF%BC"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.1 变限函数概念与求导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%8F%98%E4%B8%8A%E9%99%90%E7%A7%AF%E5%88%86%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7%E4%B8%8E%E5%8F%AF%E5%AF%BC%E6%80%A7%E5%88%A4%E6%96%AD"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.2 变上限积分的连续性与可导性判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E7%A7%AF%E5%88%86%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3 积分不等式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.4 反常积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E6%B1%82%E7%A7%AF%E5%88%86%E5%87%BD%E6%95%B0"><span class="toc-number">3.3.5.</span> <span class="toc-text">3.5 求积分函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">第四章 常微分方程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%80%E9%98%B6%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">4.1.</span> <span class="toc-text">1 一阶微分方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8F%AF%E9%99%8D%E4%BB%B7%E7%9A%84%E9%AB%98%E9%98%B6%E6%96%B9%E7%A8%8B"><span class="toc-number">4.2.</span> <span class="toc-text">2 可降价的高阶方程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8F%AF%E9%99%8D%E9%98%B6%E7%9A%84%E9%AB%98%E9%98%B6%E6%96%B9%E7%A8%8B"><span class="toc-number">4.2.1.</span> <span class="toc-text">2.1 可降阶的高阶方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%A7%A3%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">4.2.2.</span> <span class="toc-text">2.2 解的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%80%E8%88%AC%E5%BD%A2%E5%BC%8F"><span class="toc-number">4.2.3.</span> <span class="toc-text">2.3 微分方程的一般形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="toc-number">4.2.4.</span> <span class="toc-text">2.4 解题方法论</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%A9%BA%E9%97%B4%E5%87%A0%E4%BD%95"><span class="toc-number">5.</span> <span class="toc-text">第五章 空间几何</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%A9%BA%E9%97%B4%E5%90%91%E9%87%8F"><span class="toc-number">5.1.</span> <span class="toc-text">1 空间向量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%A9%BA%E9%97%B4%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87"><span class="toc-number">5.1.1.</span> <span class="toc-text">1.1 空间直角坐标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%90%91%E9%87%8F%E8%A1%A8%E7%A4%BA%E4%B8%8E%E8%BF%90%E7%AE%97"><span class="toc-number">5.1.2.</span> <span class="toc-text">1.2 向量表示与运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%90%91%E9%87%8F%E7%9A%84%E6%95%B0%E9%87%8F%E7%A7%AF%E4%B8%8E%E5%90%91%E9%87%8F%E7%A7%AF"><span class="toc-number">5.1.3.</span> <span class="toc-text">1.3 向量的数量积与向量积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E6%B7%B7%E5%90%88%E7%A7%AF"><span class="toc-number">5.1.4.</span> <span class="toc-text">1.4 混合积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E6%96%B9%E5%90%91%E4%BD%99%E5%BC%A6"><span class="toc-number">5.1.5.</span> <span class="toc-text">1.5 方向余弦</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%A9%BA%E9%97%B4%E5%87%A0%E4%BD%95"><span class="toc-number">5.2.</span> <span class="toc-text">2 空间几何</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%B9%B3%E9%9D%A2%E4%B8%8E%E7%A9%BA%E9%97%B4%E7%9B%B4%E7%BA%BF"><span class="toc-number">5.2.1.</span> <span class="toc-text">2.1 平面与空间直线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9B%B2%E9%9D%A2%E4%B8%8E%E7%A9%BA%E9%97%B4%E6%9B%B2%E7%BA%BF"><span class="toc-number">5.2.2.</span> <span class="toc-text">2.2 曲面与空间曲线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%9B%B2%E9%9D%A2%E4%B8%8E%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%88%87%E7%BA%BF%E4%B8%8E%E6%B3%95%E7%BA%BF"><span class="toc-number">5.2.3.</span> <span class="toc-text">2.3 曲面与曲线的切线与法线</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6"><span class="toc-number">6.</span> <span class="toc-text">第五章 多元函数微分学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%87%8D%E6%9E%81%E9%99%90%E3%80%81%E8%BF%9E%E7%BB%AD%E3%80%81%E5%81%8F%E5%AF%BC%E6%95%B0%E3%80%81%E5%85%A8%E5%BE%AE%E5%88%86"><span class="toc-number">6.1.</span> <span class="toc-text">1 重极限、连续、偏导数、全微分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%87%8D%E6%9E%81%E9%99%90"><span class="toc-number">6.1.1.</span> <span class="toc-text">1.1 重极限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%81%8F%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%85%A8%E5%BE%AE%E5%88%86%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">6.2.</span> <span class="toc-text">2 偏导数与全微分的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%B1%82%E5%85%B7%E4%BD%93%E7%82%B9%E7%9A%84%E5%81%8F%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%A8%E5%BE%AE%E5%88%86"><span class="toc-number">6.2.1.</span> <span class="toc-text">2.1 求具体点的偏导数及全微分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%B1%82%E5%85%B7%E4%BD%93%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%81%8F%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%A8%E5%BE%AE%E5%88%86"><span class="toc-number">6.2.2.</span> <span class="toc-text">2.2 求具体表达式的偏导数及全微分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%B1%82%E6%8A%BD%E8%B1%A1%E5%87%BD%E6%95%B0%E7%9A%84%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0%E7%9A%84%E5%81%8F%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%A8%E5%BE%AE%E5%88%86"><span class="toc-number">6.2.3.</span> <span class="toc-text">2.3 求抽象函数的复合函数的偏导数及全微分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E9%9A%90%E5%87%BD%E6%95%B0%E6%B1%82%E5%AF%BC%E6%B3%95"><span class="toc-number">6.2.4.</span> <span class="toc-text">2.4 隐函数求导法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9E%81%E5%80%BC%E4%B8%8E%E6%9C%80%E5%80%BC"><span class="toc-number">6.3.</span> <span class="toc-text">3 极值与最值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%97%A0%E6%9D%A1%E4%BB%B6%E6%9E%81%E5%80%BC"><span class="toc-number">6.3.1.</span> <span class="toc-text">3.1 无条件极值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%9D%A1%E4%BB%B6%E6%9E%81%E5%80%BC%E5%8F%8A%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E6%95%B0%E6%B3%95"><span class="toc-number">6.3.2.</span> <span class="toc-text">3.2 条件极值及拉格朗日乘数法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%80%BC"><span class="toc-number">6.3.3.</span> <span class="toc-text">3.3 最大最小值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%96%B9%E5%90%91%E5%AF%BC%E6%95%B0"><span class="toc-number">6.4.</span> <span class="toc-text">4 方向导数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E5%90%91%E5%AF%BC%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E8%AE%A1%E7%AE%97"><span class="toc-number">6.4.1.</span> <span class="toc-text">4.1 方向导数的概念及计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%A2%AF%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97"><span class="toc-number">6.4.2.</span> <span class="toc-text">4.2 梯度的概念与计算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E5%AD%A6"><span class="toc-number">7.</span> <span class="toc-text">第六章 多元函数积分学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-number">7.1.</span> <span class="toc-text">1 二重积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">7.1.1.</span> <span class="toc-text">1.1 二重积分的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95"><span class="toc-number">7.1.2.</span> <span class="toc-text">1.2 二重积分解题方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86"><span class="toc-number">7.2.</span> <span class="toc-text">2 三重积分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86"><span class="toc-number">7.3.</span> <span class="toc-text">3 曲线积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BA%8C%E7%B1%BB%E6%9B%B2%E7%BA%BF%E7%A7%AF%E5%88%86%E8%BF%90%E7%AE%97"><span class="toc-number">7.3.1.</span> <span class="toc-text">3.1 二类曲线积分运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%A0%BC%E6%9E%97%E5%85%AC%E5%BC%8F-%E8%B7%AF%E5%BE%84%E6%97%A0%E5%85%B3"><span class="toc-number">7.3.2.</span> <span class="toc-text">3.2 格林公式+路径无关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86"><span class="toc-number">7.4.</span> <span class="toc-text">4 曲面积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E4%B8%A4%E7%B1%BB%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">7.4.1.</span> <span class="toc-text">4.1 两类曲面积分的运算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0"><span class="toc-number">8.</span> <span class="toc-text">第七章 无穷级数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B8%B8%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0"><span class="toc-number">8.1.</span> <span class="toc-text">1 常数项级数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%BA%A7%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="toc-number">8.1.1.</span> <span class="toc-text">1.1 级数基本性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%88%A4%E6%96%AD%E6%AD%A3%E9%A1%B9%E7%BA%A7%E6%95%B0%E6%95%9B%E6%95%A3%E6%80%A7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">8.1.2.</span> <span class="toc-text">1.2 判断正项级数敛散性的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%BA%A4%E9%94%99%E7%BA%A7%E6%95%B0"><span class="toc-number">8.1.3.</span> <span class="toc-text">1.3 交错级数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E4%BB%BB%E6%84%8F%E6%80%A7%E7%BA%A7%E6%95%B0"><span class="toc-number">8.1.4.</span> <span class="toc-text">1.4 任意性级数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E5%B8%B8%E7%94%A8%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="toc-number">8.1.5.</span> <span class="toc-text">1.5 常用解题方法论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%B9%82%E7%BA%A7%E6%95%B0"><span class="toc-number">8.2.</span> <span class="toc-text">2 幂级数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%94%B6%E6%95%9B%E5%8D%8A%E5%BE%84%EF%BC%8C%E6%94%B6%E6%95%9B%E5%8C%BA%E9%97%B4%EF%BC%8C%E6%94%B6%E6%95%9B%E5%9F%9F"><span class="toc-number">8.2.1.</span> <span class="toc-text">2.1 收敛半径，收敛区间，收敛域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%B9%82%E7%BA%A7%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">8.2.2.</span> <span class="toc-text">2.2 幂级数的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80"><span class="toc-number">8.2.3.</span> <span class="toc-text">2.3 函数的幂级数展开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BA%A7%E6%95%B0%E6%B1%82%E5%92%8C%EF%BC%88%E9%87%8D%E9%9A%BE%E7%82%B9%EF%BC%89"><span class="toc-number">8.2.4.</span> <span class="toc-text">2.4 级数求和（重难点）</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&text="><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&is_video=false&description="><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&title="><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&name=&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://xxsy613.github.io/2023/08/21/%E9%AB%98%E6%95%B0%E5%A4%A7%E7%BA%B2/&t="><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2022-2023
+    潇湘水云
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'xxsy';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+<!-- utterances Comments -->
+
+</body>
+</html>

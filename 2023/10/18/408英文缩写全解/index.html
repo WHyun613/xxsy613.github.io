@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="计算机网络RTT	Round Trip Time	发送数据到接受到接收端的确认，经历的时延	 OSI	Open System Interconnection Model	计算机网络体系结构，物理层，数据链路层，网络层，传输层，会话层，表示层，应用层 TCP&#x2F;IP Protocol Suite 计算机网路体系结构，网络接口层，网际层，传输层，应用层 SAP	Service Access P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="水云的博客">
+<meta property="og:url" content="http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/index.html">
+<meta property="og:site_name" content="水云的博客">
+<meta property="og:description" content="计算机网络RTT	Round Trip Time	发送数据到接受到接收端的确认，经历的时延	 OSI	Open System Interconnection Model	计算机网络体系结构，物理层，数据链路层，网络层，传输层，会话层，表示层，应用层 TCP&#x2F;IP Protocol Suite 计算机网路体系结构，网络接口层，网际层，传输层，应用层 SAP	Service Access P">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-10-18T10:30:25.174Z">
+<meta property="article:modified_time" content="2023-10-29T12:25:11.992Z">
+<meta property="article:author" content="潇湘水云">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>水云的博客</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/%5Bobject%20Object%5D" title="水云的博客" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2023/10/16/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&text="><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&is_video=false&description="><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&name=&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&t="><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="toc-number">1.</span> <span class="toc-text">计算机网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">计算机组成原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.</span> <span class="toc-text">操作系统</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">潇湘水云</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-10-18T10:30:25.174Z" itemprop="datePublished">2023-10-18</time>
+        
+        (Updated: <time datetime="2023-10-29T12:25:11.992Z" itemprop="dateModified">2023-10-29</time>)
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><p><strong>RTT	Round Trip Time</strong>	发送数据到接受到接收端的确认，经历的时延	</p>
+<p><strong>OSI	Open System Interconnection Model</strong>	计算机网络体系结构，物理层，数据链路层，网络层，传输层，会话层，表示层，应用层</p>
+<p><strong>TCP&#x2F;IP Protocol Suite</strong> 计算机网路体系结构，网络接口层，网际层，传输层，应用层</p>
+<p><strong>SAP	Service Access Point</strong>	服务访问点，同一系统中相邻两层的实体交换信息的逻辑接口，用于区分不同的服务类型，表示上层为下层提供服务的点</p>
+<p><strong>PDU	Protocol Data Unit</strong>	协议数据单元，对等层次之间传送的数据包称为该层的协议数据单元（帧、分组、报文）PDU &#x3D; PCI + SDU</p>
+<p><strong>SDU	Segment Data Unit</strong>	服务数据单元，同一系统内，层与层之间交换的数据包称为服务数据单元</p>
+<p><strong>PCI	Protocol Control Information</strong>	协议控制信息，控制协议操作的信息</p>
+<p><strong>RZ	Return To Zero</strong>	归零编码把时钟信号用归零的方式编码在了数据内，称为“自同步”信号</p>
+<p><strong>NRZ	Non Return To Zero</strong>	非归零编码，需要时钟信号线，即外同步（以下四种都可以自同步）</p>
+<p><strong>NRZI	Non Return To Zero Reversal</strong>	反向非归零编码，既能传输时钟信号，又不损失系统带宽</p>
+<p><strong>ASK	Amplitude Shift Keying</strong>	幅移键控，通过改变载波信号的振幅来表示数字信号1和0，载波的频率和相位不发生改变</p>
+<p>**FSK	Frequency Shift Keying	**频移键控，通过改变载波信号的频率来表示数字信号1和0，载波的振幅和相位不发生改变</p>
+<p><strong>PSK	Phase Shift Keying</strong>	相移键控 ，通过改变载波信号的相位来表示数字信号1和0，载波的振幅和频率不发生改变，又分为绝对调相和相对调相</p>
+<p><strong>QAM	Quadracture Amplitude Modulation</strong>	正交振幅调制 ，频率相同下，将ASK和PSK结合，形成叠加信号</p>
+<p><strong>MTU	Maximum Transmission Unit</strong>	最大传输单元</p>
+<p>**CRC	Cyclic Redundancy Code	**循环冗余码</p>
+<p><strong>FCS	Frame Check (Checking) Sequence</strong>	帧检验序列</p>
+<p><strong>ARQ	Automatic Repeat reQuest</strong>	自动重传请求，通过接收方请求发送方重传出错的数据来回复出错的帧，是通信中用于处理信道所带来查错的方法之一</p>
+<p><strong>SW	Stay-and-Wait</strong>	停止等待协议，流量控制的方法，每次只允许发送一帧，然后等待接收方的确认帧</p>
+<p><strong>GBN	Go-Back-N</strong>	后退N帧协议，可以连续发送帧，但是接收方只允许按顺序接受帧</p>
+<p><strong>SR	Selective Repeat</strong>	选择重传协议，设法只重传出现差错的数据帧，发送窗口和接收窗口为$2^{n-1}$个</p>
+<p><strong>FDM	Frequency Division Mutiplexing</strong>	频分多路复用，将多路基带信号调制到不同频率载波上，再叠加形成一个复合信号(相邻信道需要隔离频道，防止干扰)</p>
+<p><strong>TDM	Time Division Mutiplexing</strong>	时分多路复用，是将一条物理信道按时间分成若干时间片，轮流地分配给多个信号使用</p>
+<p><strong>WDM	Wave Division Multiplexing</strong>	波分多路复用	在一根光纤中传输多种不同波长(频率)的光信号，由于波长(频率)不同，各路光信号互不干扰，最后再用波长分解复用器将各路波长分解出来</p>
+<p><strong>CDM(CDMA)	Code Division Multiple Access</strong>	码分多路复用，每一个用户可以在同样的时间使用同样的频带进行通信，共享时间空间</p>
+<p><strong>ALOHA	Addictive Link On-line HAwaii system</strong>	分为纯ALOHA和时隙ALOHA，前者是自由发送数据帧，后者只能在每个时隙开始时发送帧，不听就发</p>
+<p><strong>CSMA	Carrier Sence Multiple Access</strong>	载波监听多路访问，分为1-坚持CSMA，非坚持CSMA，p-坚持CSMA，先听再发</p>
+<p><strong>CSMA&#x2F;CD	Carrier Sence Multiple Access&#x2F;Collision Detection</strong>	载波监听多路访问&#x2F;碰撞检测，应用于有线连接的局域网，先听再发，边听边发，冲突停发，随机重发</p>
+<p><strong>CSMA&#x2F;CA	Carrier Sence Multiple Access&#x2F;Collision Avoidence</strong>	载波监听多路访问&#x2F;碰撞避免，应用于无线连接的局域网</p>
+<p><strong>IFS	Inter Frame Space</strong>	帧间间隔，所有的站点必须在持续检测到信道空闲一段指定时间后才能发送帧</p>
+<p><strong>SIFS	Short Inter Frame Space</strong>	短帧间间隔，短</p>
+<p><strong>PIFS	Point Inter Frame Space</strong>	点协调间隔，中</p>
+<p><strong>DIFS	Distributed Inter Frame Space</strong>	分布式协调间隔，长</p>
+<p><strong>RTS	Request To Send</strong>	请求发送控制帧</p>
+<p><strong>CTS	Clear To Send</strong>	允许发送控制帧</p>
+<p><strong>LAN	Local Area Network</strong>	局域网</p>
+<p><strong>VLAN	Virtual Local Area Network</strong>	虚拟局域网</p>
+<p><strong>LLC	Logic Link Control Layer</strong>	逻辑链路控制子层，向网络层提供无确认无连接、面向连接、带确认无连接、高速传送4种不同的连接服务类型</p>
+<p><strong>MAC	Medium Access Control</strong>	介质访问控制子层，向上层屏蔽对物理层访问的各种差异，提供对物理层的统一访问接又，主要功能包括:组帧和拆卸帧、比特传输差错控制、透明传输，用来决定广播信道中信道分配的协议属于数据链路层的一个子层</p>
+<p><strong>MAC	Medium Access Control</strong>	介质访问控制地址，MAC地址是对网络上各接又的唯一标识，而不是对网络上各设备的唯一标识</p>
+<p><strong>PPP	Point to Point Protocol</strong>	点对点连接协议，广域网数据链路层协议</p>
+<p><strong>LCP	Link Control Protocol</strong>	链路控制协议 LCP，用于建立、配置以及测试数据链路的连接(物理)</p>
+<p><strong>NCP	Network Control Protocol</strong>	一套网络控制协议NCPs其中的每一个协议支持不同的网络层协议(逻辑)</p>
+<p><strong>SDN	Software Define Network</strong>	软件定义网络，南向接口北向接口</p>
+<p><strong>IPV4	Internet Protocol Version 4</strong></p>
+<p><strong>IPV6	Internet Protocol Version 6</strong></p>
+<p><strong>MF	More Fragment</strong>	为1时表示后面还有分片</p>
+<p><strong>DF</strong>	<strong>Don’t Fragment</strong>	为1时不允许分片，为0时允许分片</p>
+<p><strong>NAT	Network Address Translation</strong>	网络地址转换</p>
+<p><strong>CIDR	Classless Inter-Domain Routing</strong>	无分类域间路由选择，IP地址的划分方法</p>
+<p><strong>ARP	Address Resolution Protocol</strong>	地址解析协议，完成IP地址到MAC地址的映射，工作在网络层</p>
+<p><strong>DHCP	Dynamic Host Configuration Protocol</strong>	动态主机配置协议，用于给主机动态的分配IP地址，应用层协议，基于UDP</p>
+<p><strong>ICMP	Internet Control Message Protocol</strong>	网际控制报文协议，让主机或路由器报告差错和异常情况，给IP数据报加上一个ICMP首部变为ICMP报文，网络层协议</p>
+<p><strong>PING	Packet Internet Groper</strong>	分组网间探测，ICMP的应用，用来测试两主机之间的连通性，工作在应用层</p>
+<p>**AS	Autonomous System	**自治系统，单一技术管理下的路由器合集</p>
+<p><strong>IGP	Interior Gateway Protocol</strong>	内部网关协议，在自治系统内部使用的路由选择协议</p>
+<p>​	<strong>RIP	Routing Information Protocol</strong>	路由选择信息协议，IGP协议，分布式的基于距离向量的路由选择协议，应用层协议基于UDP</p>
+<p>​	<strong>OSPF	Open Shortest Path First</strong>	开放最短路径协议，IGP协议，分布式链路状态路由算法，网络层协议基于IP</p>
+<p><strong>EGP	External Gateway Protocol</strong>	外部网关协议，在两个不同的自治系统之间使用的路由选择协议</p>
+<p>​	<strong>BGP	Border Gateway Protocol</strong>	边界网关协议，EGP协议，是不同自治系统的路由器之间交换信息的协议，应用层协议基于TCP</p>
+<p><strong>IGMP	Internet Group Management Protocol</strong>	因特网组管理协议</p>
+<p><strong>UDP	User Datagram Protocol</strong>	UDP数据报协议，传输层协议，提供复用，分用和差错检测，无连接不可靠</p>
+<p><strong>TCP	Transmission Control Protocol</strong>	传输控制协议，提供有连接可靠的服务，让传输可靠有序无丢失不重复</p>
+<p><strong>URG	Urgent</strong>	紧急位，TCP数据报的标识位，当值为1时表示该数据报为紧急数据，设为最高优先级</p>
+<p><strong>ACK	ACKnowledgment</strong>	确认位，当值为1时确认号字段才有效</p>
+<p><strong>PSH	Push</strong>	推送位，接受方收到值为1的报文段，应尽快交付给应用进程，与URG效果相同</p>
+<p><strong>RST	Reset</strong>	复位位，当值为1时，表示TCP连接出现严重差错，必须释放连接</p>
+<p><strong>SYN	Synchronous</strong>	同步位，当值为1时，表示这是一个连接请求或连接接受报文</p>
+<p><strong>FIN	Finish</strong>	终止位，当值为1时，表示发送方数据发送完毕，要求释放连接</p>
+<p><strong>rwnd	Receive Window</strong>	接收窗口，负责点到点的流量控制</p>
+<p><strong>cwnd	Crowd Window</strong>	拥塞窗口，负责全局性的拥塞控制</p>
+<p><strong>C&#x2F;S	Client&#x2F;Service</strong>	客户服务器模型，应用层</p>
+<p><strong>P2P	Peer To Peer</strong>	点对点模型，应用层</p>
+<p><strong>DNS	Domain Name System</strong>	域名系统，把网址转换为IP地址，使用无连接的UDP数据报，所属应用层</p>
+<p><strong>FTP	File Transfer Protocol</strong>	文件传输协议，使用TCP的可靠服务</p>
+<p><strong>UA	User Agent</strong>	用户代理，电子邮件的组成结构</p>
+<p><strong>SMTP</strong>	<strong>Simple Mail Transfer Protocol</strong>	邮件发送协议，用于用户代理向邮件服务器发送邮件或在邮件服务器之间发送邮件</p>
+<p><strong>POP3</strong>	<strong>Post Office Protocol - Version 3</strong>	邮件读取协议，用于用户代理从邮件服务器读取邮件，只下载邮件，不做同步</p>
+<p><strong>IMAP</strong>	<strong>Internet Message Access Protocol</strong>	因特网消息访问协议，跟POP3相同作用，下载并同步所有信息，两台电脑上的邮件系统会完全相同</p>
+<p><strong>MIME	Multipurpose Internet Mail Extensions</strong>	多用途网络邮件扩充，定义了传送非ASCII码的规则，优化了SMTP</p>
+<p><strong>WWW	World Wide Web</strong>	万维网，一个分布式，联机式的信息存储空间</p>
+<p><strong>URL	Uniform Resource Locator</strong>	统一资源定位符，使每一资源在万维网范围内有唯一标识符</p>
+<p><strong>HTTP</strong>	**HyperText Transfer Protocol	**超文本传输协议，应用层协议，使用TCP，CS</p>
+<p><strong>HTML	HyperText Markup Language</strong>	超文本标记语言，前端语言</p>
+<h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><p>MAR</p>
+<p>MDR</p>
+<p>ALU</p>
+<p>ACC</p>
+<p>IX</p>
+<p>BR</p>
+<p>PSW</p>
+<p>PC</p>
+<p>IR</p>
+<p>CU</p>
+<p>GPRs</p>
+<p>CPI</p>
+<p>MIPS</p>
+<p>RAM</p>
+<p>ROM</p>
+<p>Cache</p>
+<p>SRAM	Static Random </p>
+<p>DRAM</p>
+<p>MROM</p>
+<p>PROM</p>
+<p>EPROM</p>
+<p>SSD</p>
+<p>TLB</p>
+<p>ISA</p>
+<p>EA</p>
+<p>BR</p>
+<p>PC</p>
+<p>IX</p>
+<p>CISC</p>
+<p>RISC</p>
+<p>CM</p>
+<p>CMDR</p>
+<p>CMAR</p>
+<p>SISD</p>
+<p>SIMD</p>
+<p>MIMD</p>
+<p>SMP</p>
+<p>UMA</p>
+<p>NUMA</p>
+<p>DMA</p>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>KMP	串的模式匹配</p>
+<p>BFS	广度优先搜索</p>
+<p>DFS	深度优先搜索</p>
+<p>MST</p>
+<p>Prim算法</p>
+<p>Kruskal</p>
+<p>Dijkstra</p>
+<p>Floyd</p>
+<p>DAG</p>
+<p>AOV</p>
+<p>ACL</p>
+<p>ASL</p>
+<p>BST</p>
+<p>AVL树</p>
+<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><p><strong>先来先服务 first-come first-serverd（FCFS）</strong></p>
+<p><strong>最短作业优先 shortest job first（SJF）</strong></p>
+<p><strong>最佳（OPT）置换算法：</strong>从主存中移出永远不再需要的页面；如无这样的页面存在，则选择最长时间不需要访问的页面。于所选择的被淘汰页面将是以后永不使用的，或者是在最长时间内不再被访问的页面，这样可以保证获得最低的缺页率。 即被淘汰页面是以后永不使用或最长时间内不再访问的页面。</p>
+<p><strong>先进先出（FIFO）置换算法：</strong>是最简单的页面置换算法。这种算法的基本思想是：当需要淘汰一个页面时，总是选择驻留主存时间最长的页面进行淘汰，即先进入主存的页面先淘汰。其理由是：最早调入主存的页面不再被使用的可能性最大。 即优先淘汰最早进入内存的页面。（往前看）</p>
+<p><strong>最近最久未使用（LRU）算法：</strong>这种算法的基本思想是：利用局部性原理，根据一个作业在执行过程中过去的页面访问历史来推测未来的行为。它认为过去一段时间里不曾被访问过的页面，在最近的将来可能也不会再被访问。所以，这种算法的实质是：当需要淘汰一个页面时，总是选择在最近一段时间内最久不用的页面予以淘汰。 即淘汰最近最长时间未访问过的页面。（往前看）</p>
+<p><strong>时钟(CLOCK)置换算法：</strong></p>
+<p><strong>FCB	File Control Block</strong>	文件控制块</p>
+<p><strong>FAT	File Allocation Table</strong>	文件分配表</p>
+<p>**MBR	Master Boot Record	**主引导记录</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="toc-number">1.</span> <span class="toc-text">计算机网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">计算机组成原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.</span> <span class="toc-text">操作系统</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&text="><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&is_video=false&description="><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&title="><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&name=&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://xxsy613.github.io/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/&t="><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2022-2023
+    潇湘水云
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'xxsy';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+<!-- utterances Comments -->
+
+</body>
+</html>

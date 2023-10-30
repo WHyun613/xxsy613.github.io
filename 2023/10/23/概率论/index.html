@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="整理自方浩概率论强化课内容 一 随机事件和概率事件的运算规律分配率：$A\cap (B\cup C)&#x3D;(A\cap B)\cup(A\cap C)$              $A\cup (B\cap C)&#x3D;(A\cup B)\cup(A\cap C)$  德摩根率 二 随机变量及其分布分布函数 重要性质：  随机变量X趋近于0时函数为0，趋近于无穷时函数为1 单调不减 右连">
+<meta property="og:type" content="article">
+<meta property="og:title" content="水云的博客">
+<meta property="og:url" content="http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/index.html">
+<meta property="og:site_name" content="水云的博客">
+<meta property="og:description" content="整理自方浩概率论强化课内容 一 随机事件和概率事件的运算规律分配率：$A\cap (B\cup C)&#x3D;(A\cap B)\cup(A\cap C)$              $A\cup (B\cap C)&#x3D;(A\cup B)\cup(A\cap C)$  德摩根率 二 随机变量及其分布分布函数 重要性质：  随机变量X趋近于0时函数为0，趋近于无穷时函数为1 单调不减 右连">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-10-23T08:36:00.278Z">
+<meta property="article:modified_time" content="2023-10-30T07:42:04.324Z">
+<meta property="article:author" content="潇湘水云">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>水云的博客</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/%5Bobject%20Object%5D" title="水云的博客" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2023/10/26/408%E7%9C%9F%E9%A2%98%E5%8D%B7%E5%BD%92%E6%A1%A3/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2023/10/18/408%E8%8B%B1%E6%96%87%E7%BC%A9%E5%86%99%E5%85%A8%E8%A7%A3/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&text="><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&is_video=false&description="><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&name=&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&t="><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E5%92%8C%E6%A6%82%E7%8E%87"><span class="toc-number">1.</span> <span class="toc-text">一 随机事件和概率</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%9A%84%E8%BF%90%E7%AE%97%E8%A7%84%E5%BE%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">事件的运算规律</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83"><span class="toc-number">2.</span> <span class="toc-text">二 随机变量及其分布</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83"><span class="toc-number">3.</span> <span class="toc-text">三 多维随机变量及其分布</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%81%94%E5%90%88%E5%88%86%E5%B8%83"><span class="toc-number">3.1.</span> <span class="toc-text">1 联合分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%A6%BB%E6%95%A3-x2F-%E8%BF%9E%E7%BB%AD"><span class="toc-number">3.2.</span> <span class="toc-text">2 离散&#x2F;连续</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%A6%BB%E6%95%A3"><span class="toc-number">3.2.1.</span> <span class="toc-text">2.1 离散</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%BF%9E%E7%BB%AD"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.2 连续</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="toc-number">3.2.3.</span> <span class="toc-text">2.3 独立性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BA%8C%E7%BB%B4%E6%AD%A3%E6%80%81"><span class="toc-number">3.3.</span> <span class="toc-text">3 二维正态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Z-x3D-g-x-y"><span class="toc-number">3.4.</span> <span class="toc-text">4 $Z&#x3D;g(x,y)$</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81"><span class="toc-number">4.</span> <span class="toc-text">四 随机变量的数字特征</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9C%9F%E6%9C%9B%EF%BC%8C%E6%96%B9%E5%B7%AE"><span class="toc-number">4.1.</span> <span class="toc-text">1 期望，方差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8D%8F%E6%96%B9%E5%B7%AE%EF%BC%8C%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="toc-number">4.2.</span> <span class="toc-text">2 协方差，相关系数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%8B%AC%E7%AB%8B%E4%B8%8E%E4%B8%8D%E7%9B%B8%E5%85%B3"><span class="toc-number">4.3.</span> <span class="toc-text">3 独立与不相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94-%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">五 大数定律和中心极限定理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%87%E6%AF%94%E9%9B%AA%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text">1 切比雪夫不等式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B"><span class="toc-number">5.2.</span> <span class="toc-text">2 大数定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%B8%80%E4%B8%AA%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90"><span class="toc-number">5.3.</span> <span class="toc-text">3 一个中心极限</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">6.</span> <span class="toc-text">六 数理统计的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%BB%9F%E8%AE%A1%E9%87%8F"><span class="toc-number">6.1.</span> <span class="toc-text">1 统计量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%89%E5%A4%A7%E5%88%86%E5%B8%83"><span class="toc-number">6.2.</span> <span class="toc-text">2 三大分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93"><span class="toc-number">6.3.</span> <span class="toc-text">3 正态总体</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83-%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1"><span class="toc-number">7.</span> <span class="toc-text">七 参数估计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9F%A9%E4%BC%B0%E8%AE%A1"><span class="toc-number">7.1.</span> <span class="toc-text">1 矩估计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="toc-number">7.2.</span> <span class="toc-text">2 最大似然估计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B1%82-E-hat-theta-D-hat-theta"><span class="toc-number">7.3.</span> <span class="toc-text">3 求$E(\hat\theta),D(\hat\theta)$</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB-%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-number">8.</span> <span class="toc-text">八 假设检验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%87%92"><span class="toc-number">8.1.</span> <span class="toc-text">1 懒</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">潇湘水云</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-10-23T08:36:00.278Z" itemprop="datePublished">2023-10-23</time>
+        
+        (Updated: <time datetime="2023-10-30T07:42:04.324Z" itemprop="dateModified">2023-10-30</time>)
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><u>整理自方浩概率论强化课内容</u></p>
+<h1 id="一-随机事件和概率"><a href="#一-随机事件和概率" class="headerlink" title="一 随机事件和概率"></a>一 随机事件和概率</h1><h3 id="事件的运算规律"><a href="#事件的运算规律" class="headerlink" title="事件的运算规律"></a>事件的运算规律</h3><p>分配率：$A\cap (B\cup C)&#x3D;(A\cap B)\cup(A\cap C)$<br>              $A\cup (B\cap C)&#x3D;(A\cup B)\cup(A\cap C)$ </p>
+<p>德摩根率</p>
+<h1 id="二-随机变量及其分布"><a href="#二-随机变量及其分布" class="headerlink" title="二 随机变量及其分布"></a>二 随机变量及其分布</h1><p><strong>分布函数</strong></p>
+<p>重要性质：</p>
+<ul>
+<li>随机变量X趋近于0时函数为0，趋近于无穷时函数为1</li>
+<li>单调不减</li>
+<li>右连续</li>
+<li>随机变量X的区间为左闭右开</li>
+<li>$P&#x3D;\lbrace x\leq x_0\rbrace&#x3D;F(x_0)$   $P&#x3D;\lbrace x&lt; x_0\rbrace&#x3D;F(x_0-0)$</li>
+</ul>
+<p>解题方法：一找关键点，二区间为左闭右开，三记住分布函数的累积性</p>
+<p><strong>求随机变量的分布律</strong>：表示离散性，可用分布律的性质</p>
+<p>所有求分布律的题记得列出随机变量的范围k</p>
+<p><strong>几何分布：</strong>成功率为p，一共进行k次实验，在成功一次之前需要失败k-1次，所以分布率为$p(1-p)^{k-1}$，期望为$E&#x3D;\frac{1}{p}$<br>几何分布从0开始，二项分布从1开始</p>
+<p>期望为$\frac{1}{p}$，方差为$\frac{1-p}{p^2}$</p>
+<p><strong>泊松分布：</strong>$\frac{\lambda^k}{k!}e^{-\lambda},k&#x3D;0,1,2…$，容易跟无穷级数求和相结合</p>
+<p>期望为$\lambda$，方差为$\lambda$</p>
+<p><strong>概率密度：</strong>表示$F(k)$具有连续性，满足概率密度的各种性质</p>
+<p><strong>概率分布（分布律）与概率密度：</strong>分布律是离散型分布函数中的，概率密度是连续型分布函数中的，两种都是为了求分布函数<br>$$<br>概率分布求分布函数：F(x)&#x3D;\sum_{x_k\leq x}p_k\<br>概率密度求分布函数：F(x)&#x3D;\int^x_{-\infty}f(t)dt<br>$$<br><strong>指数分布：</strong><br>$$<br>f(x)&#x3D;\lambda e^{-\lambda x},x&gt;0\<br>F(x)&#x3D;1-e^{-\lambda x},x&gt;0\<br>F(x)&#x3D;0,x\leq0<br>$$<br>有 无记忆性：$P\lbrace X&gt;t+s|X&gt;s\rbrace&#x3D;P\lbrace X&gt;t\rbrace$</p>
+<p><strong>正态分布：</strong><br>$$<br>F(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{\frac{(x-\mu)^2}{2\sigma^2}},X\sim N(\mu,\sigma^2)\<br>\Phi(x)&#x3D;\frac{1}{\sqrt{2\pi}}e^{\frac{x^2}{2}},X\sim N(0,1)\<br>F(x)&#x3D;\Phi(\frac{x-\mu}{\sigma})<br>$$<br>期望为$\mu$，方差为$\sigma^2$</p>
+<h1 id="三-多维随机变量及其分布"><a href="#三-多维随机变量及其分布" class="headerlink" title="三 多维随机变量及其分布"></a>三 多维随机变量及其分布</h1><h2 id="1-联合分布"><a href="#1-联合分布" class="headerlink" title="1 联合分布"></a>1 联合分布</h2><p>$F(x,y)&#x3D;P(X\leq x,Y\leq y)$</p>
+<p>结合图像</p>
+<p><strong>联合密度：</strong>$f(x,y)$</p>
+<p><strong>边缘密度：</strong>$f_x(x)$</p>
+<p><strong>条件密度：</strong>$f_{y|x}(y|x)$</p>
+<h2 id="2-离散-x2F-连续"><a href="#2-离散-x2F-连续" class="headerlink" title="2 离散&#x2F;连续"></a>2 离散&#x2F;连续</h2><h3 id="2-1-离散"><a href="#2-1-离散" class="headerlink" title="2.1 离散"></a>2.1 离散</h3><p>构建联合联合分布表，得到边缘分布（表中一行或者一列的数值和）和条件分布（表中每一项的值）</p>
+<h3 id="2-2-连续"><a href="#2-2-连续" class="headerlink" title="2.2 连续"></a>2.2 连续</h3><p>计算边缘密度和条件密度</p>
+<h3 id="2-3-独立性"><a href="#2-3-独立性" class="headerlink" title="2.3 独立性"></a>2.3 独立性</h3><p>一般不独立，需要举反例</p>
+<h2 id="3-二维正态"><a href="#3-二维正态" class="headerlink" title="3 二维正态"></a>3 二维正态</h2><p>独立性，边缘分布，降维打击</p>
+<p>（配方，除系数，添因子）×2</p>
+<h2 id="4-Z-x3D-g-x-y"><a href="#4-Z-x3D-g-x-y" class="headerlink" title="4 $Z&#x3D;g(x,y)$"></a>4 $Z&#x3D;g(x,y)$</h2><p>离散跟离散：列举</p>
+<p>离散跟连续：定义，找关键点</p>
+<p>连续跟连续：卷积公式，找关键点</p>
+<h1 id="四-随机变量的数字特征"><a href="#四-随机变量的数字特征" class="headerlink" title="四 随机变量的数字特征"></a>四 随机变量的数字特征</h1><h2 id="1-期望，方差"><a href="#1-期望，方差" class="headerlink" title="1 期望，方差"></a>1 期望，方差</h2><p>根据性质来求，尽量减少计算量</p>
+<p><strong>离散型的期望：</strong><br>$$<br>E(X)&#x3D;\sum_{k&#x3D;1}^\infty x_kp_k<br>$$<br><strong>连续型的期望：</strong><br>$$<br>E(x)&#x3D;\int_{-\infty}^{+\infty}x f(x)dx\<br>E(g(x))&#x3D;\int_{-\infty}^{+\infty}g(x )f(x)dx—概率具有稳定性<br>$$<br>先有方差再有期望，方差由期望定义</p>
+<p><strong>曹冲称象：</strong>将随机变量的取值先增后减，或者先减后加，构造成常见的分布进而求常见分布的期望方差</p>
+<p><strong>常见随机变量的分布，期望和方差，需要记牢</strong></p>
+<h2 id="2-协方差，相关系数"><a href="#2-协方差，相关系数" class="headerlink" title="2 协方差，相关系数"></a>2 协方差，相关系数</h2><p>主要看性质</p>
+<p><strong>协方差：</strong><br>$$<br>Cov(X,Y)&#x3D;E(XY)-E(X)E(Y)\<br>D(X+Y)&#x3D;D(X)+D(Y)+2Cov(X,Y)\<br>Cov(X_1+X_2,Y_1+Y_2)自由组合<br>$$<br><strong>相关系数ρ</strong><br>$$<br>|\rho|&#x3D;1等价于P\lbrace Y&#x3D;aX+b\rbrace&#x3D;1<br>$$</p>
+<h2 id="3-独立与不相关"><a href="#3-独立与不相关" class="headerlink" title="3 独立与不相关"></a>3 独立与不相关</h2><ul>
+<li>独立是概率分布，不相关是数字特征</li>
+<li>独立则不相关，不相关不一定独立</li>
+<li>用不相关推不独立时，举反例</li>
+<li>用不相关推独立时，计算</li>
+<li>在二维正态下，独立与不相关可互推</li>
+</ul>
+<h1 id="五-大数定律和中心极限定理"><a href="#五-大数定律和中心极限定理" class="headerlink" title="五 大数定律和中心极限定理"></a>五 大数定律和中心极限定理</h1><h2 id="1-切比雪夫不等式"><a href="#1-切比雪夫不等式" class="headerlink" title="1 切比雪夫不等式"></a>1 切比雪夫不等式</h2><p>X偏离期望越多，几率越小<br>$$<br>P\lbrace|X-E(X)|\geq\epsilon\rbrace\leq \frac{D(X)}{\epsilon^2}<br>$$<br>求概率上界</p>
+<h2 id="2-大数定律"><a href="#2-大数定律" class="headerlink" title="2 大数定律"></a>2 大数定律</h2><p>随机变量的均值，依概率收敛于期望</p>
+<p><strong>切比雪夫大数定律：</strong>独立且<strong>不同分布</strong>，方差有上界$D(X_i)\leq M$，则随机变量依概率收敛于$\frac{1}{n}\sum_{i&#x3D;1}^nE(X_i)$</p>
+<p><strong>辛钦大数定理：</strong>独立且<strong>同分布</strong>，$E(X_i)$存在，则随机变量依概率收敛于$E(X)$<br>$$<br>\frac{X_1+X_2+…+X_n}{n}依概率收敛于E\frac{X_1+X_2+…+X_n}{n}<br>$$</p>
+<h2 id="3-一个中心极限"><a href="#3-一个中心极限" class="headerlink" title="3 一个中心极限"></a>3 一个中心极限</h2><p>求$n\to\infty$时的概率</p>
+<p>随机变量之和近似于正态分布<br>$$<br>\lim_{n\to\infty}P\lbrace\frac{\sum_{i&#x3D;1}^n x_i-n\mu}{\sqrt{n\sigma^2}}\leq a\rbrace&#x3D;\Phi(a)<br>$$</p>
+<h1 id="六-数理统计的基本概念"><a href="#六-数理统计的基本概念" class="headerlink" title="六 数理统计的基本概念"></a>六 数理统计的基本概念</h1><h2 id="1-统计量"><a href="#1-统计量" class="headerlink" title="1 统计量"></a>1 统计量</h2><p>$$<br>\overline X:E(\overline X)&#x3D;E(X),D(\overline X)&#x3D;\frac{D(X)}{n}\<br>S^2:ES^2&#x3D;\sigma^2,正态:\frac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)<br>$$</p>
+<h2 id="2-三大分布"><a href="#2-三大分布" class="headerlink" title="2 三大分布"></a>2 三大分布</h2><table>
+<thead>
+<tr>
+<th>分布</th>
+<th>形式</th>
+<th>自由度</th>
+<th>特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\chi^2(n)$</td>
+<td>$X_1^2+X_2^2+…X_n^2$</td>
+<td>$n&#x3D;平方个数$</td>
+<td>$E(\chi^2(n))&#x3D;n\ D(\chi^2(n))&#x3D;2n$</td>
+</tr>
+<tr>
+<td>$t(n)$</td>
+<td>$\frac{X}{\sqrt{Y_1^2+…Y_n^2&#x2F;n}}$</td>
+<td>$n&#x3D;括号内平方个数$</td>
+<td>偶函数对称</td>
+</tr>
+<tr>
+<td>$F(m,n)$</td>
+<td>$\frac{X_1^2+…X_n^2&#x2F;m}{Y_1^2+…Y_n^2&#x2F;n}$</td>
+<td>$m&#x3D;分子中平方个数\n&#x3D;分母中平方个数$</td>
+<td>$\frac{1}{F(m,n)}\sim F(n,m)$</td>
+</tr>
+</tbody></table>
+<h2 id="3-正态总体"><a href="#3-正态总体" class="headerlink" title="3 正态总体"></a>3 正态总体</h2><p>$$<br>\frac{\overline X-\mu}{S&#x2F;\sqrt{n}}\sim t(n-1)\<br>\frac{\overline X-\mu}{\sigma&#x2F;\sqrt n}\sim N(0,1)\<br>\frac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)<br>$$</p>
+<h1 id="七-参数估计"><a href="#七-参数估计" class="headerlink" title="七 参数估计"></a>七 参数估计</h1><h2 id="1-矩估计"><a href="#1-矩估计" class="headerlink" title="1 矩估计"></a>1 矩估计</h2><p>令$E(X)&#x3D;\bar X$，得到$\hat\theta,\bar X$的等式</p>
+<h2 id="2-最大似然估计"><a href="#2-最大似然估计" class="headerlink" title="2 最大似然估计"></a>2 最大似然估计</h2><ol>
+<li><p>求似然函数$L&#x3D;\prod_{i&#x3D;1}^{n}f(x_i,\theta)$</p>
+</li>
+<li><p>取对数求导$\frac{d\ln L}{d\theta}$</p>
+</li>
+<li><p>若求导有解，即最大估计量为$\hat\theta$</p>
+<p>若无解，则根据单调性来判断最大值</p>
+</li>
+</ol>
+<h2 id="3-求-E-hat-theta-D-hat-theta"><a href="#3-求-E-hat-theta-D-hat-theta" class="headerlink" title="3 求$E(\hat\theta),D(\hat\theta)$"></a>3 求$E(\hat\theta),D(\hat\theta)$</h2><p>性质，定义</p>
+<h1 id="八-假设检验"><a href="#八-假设检验" class="headerlink" title="八 假设检验"></a>八 假设检验</h1><h2 id="1-懒"><a href="#1-懒" class="headerlink" title="1 懒"></a>1 懒</h2><p>![image-20231029122929826](&#x2F;Users&#x2F;moon&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20231029122929826.png)</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E5%92%8C%E6%A6%82%E7%8E%87"><span class="toc-number">1.</span> <span class="toc-text">一 随机事件和概率</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%9A%84%E8%BF%90%E7%AE%97%E8%A7%84%E5%BE%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">事件的运算规律</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83"><span class="toc-number">2.</span> <span class="toc-text">二 随机变量及其分布</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83"><span class="toc-number">3.</span> <span class="toc-text">三 多维随机变量及其分布</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%81%94%E5%90%88%E5%88%86%E5%B8%83"><span class="toc-number">3.1.</span> <span class="toc-text">1 联合分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%A6%BB%E6%95%A3-x2F-%E8%BF%9E%E7%BB%AD"><span class="toc-number">3.2.</span> <span class="toc-text">2 离散&#x2F;连续</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%A6%BB%E6%95%A3"><span class="toc-number">3.2.1.</span> <span class="toc-text">2.1 离散</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%BF%9E%E7%BB%AD"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.2 连续</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="toc-number">3.2.3.</span> <span class="toc-text">2.3 独立性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BA%8C%E7%BB%B4%E6%AD%A3%E6%80%81"><span class="toc-number">3.3.</span> <span class="toc-text">3 二维正态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Z-x3D-g-x-y"><span class="toc-number">3.4.</span> <span class="toc-text">4 $Z&#x3D;g(x,y)$</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81"><span class="toc-number">4.</span> <span class="toc-text">四 随机变量的数字特征</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9C%9F%E6%9C%9B%EF%BC%8C%E6%96%B9%E5%B7%AE"><span class="toc-number">4.1.</span> <span class="toc-text">1 期望，方差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8D%8F%E6%96%B9%E5%B7%AE%EF%BC%8C%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="toc-number">4.2.</span> <span class="toc-text">2 协方差，相关系数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%8B%AC%E7%AB%8B%E4%B8%8E%E4%B8%8D%E7%9B%B8%E5%85%B3"><span class="toc-number">4.3.</span> <span class="toc-text">3 独立与不相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94-%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">五 大数定律和中心极限定理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%87%E6%AF%94%E9%9B%AA%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text">1 切比雪夫不等式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B"><span class="toc-number">5.2.</span> <span class="toc-text">2 大数定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%B8%80%E4%B8%AA%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90"><span class="toc-number">5.3.</span> <span class="toc-text">3 一个中心极限</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">6.</span> <span class="toc-text">六 数理统计的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%BB%9F%E8%AE%A1%E9%87%8F"><span class="toc-number">6.1.</span> <span class="toc-text">1 统计量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%89%E5%A4%A7%E5%88%86%E5%B8%83"><span class="toc-number">6.2.</span> <span class="toc-text">2 三大分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93"><span class="toc-number">6.3.</span> <span class="toc-text">3 正态总体</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83-%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1"><span class="toc-number">7.</span> <span class="toc-text">七 参数估计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9F%A9%E4%BC%B0%E8%AE%A1"><span class="toc-number">7.1.</span> <span class="toc-text">1 矩估计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="toc-number">7.2.</span> <span class="toc-text">2 最大似然估计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B1%82-E-hat-theta-D-hat-theta"><span class="toc-number">7.3.</span> <span class="toc-text">3 求$E(\hat\theta),D(\hat\theta)$</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB-%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-number">8.</span> <span class="toc-text">八 假设检验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%87%92"><span class="toc-number">8.1.</span> <span class="toc-text">1 懒</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&text="><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&is_video=false&description="><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&title="><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&name=&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://xxsy613.github.io/2023/10/23/%E6%A6%82%E7%8E%87%E8%AE%BA/&t="><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2022-2023
+    潇湘水云
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'xxsy';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+<!-- utterances Comments -->
+
+</body>
+</html>
